@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="SALDA_testing_1_GFP_tile_before_Properties_WFIP_HWS4.xsl"?>
+<Data>
+  <Image TextDescription="">
+    <ImageDescription>
+      <Name>GFP_tile_before</Name>
+      <Size>536.87 MB</Size>
+      <UniqueID>50fcf450-c743-11f0-933c-0068ebcb107d</UniqueID>
+      <Channels>
+        <ChannelDescription DataType="0" ChannelTag="0" Resolution="16" NameOfMeasuredQuantity="" Min="0.000000e+00" Max="6.553500e+04" Unit="" LUTName="Gray" IsLUTInverted="0" BytesInc="0" BitInc="0" OpticalResolutionXY="0.419 µm" OpticalResolutionZ="0.859 µm" />
+      </Channels>
+      <Dimensions>
+        <DimensionDescription DimID="X" NumberOfElements="2048" Origin="0" Length="665.28" Unit="µm" BitInc="0" BytesInc="2" UnitOrigin="µm" EndPosition="665.28" UnitEndPosition="µm" LogicalUnit="pixels" Voxel="0.32" VoxelUnit="µm" />
+        <DimensionDescription DimID="Y" NumberOfElements="2048" Origin="0" Length="665.28" Unit="µm" BitInc="0" BytesInc="4096" UnitOrigin="µm" EndPosition="665.28" UnitEndPosition="µm" LogicalUnit="pixels" Voxel="0.32" VoxelUnit="µm" />
+        <DimensionDescription DimID="Stage" NumberOfElements="64" Origin="0" Length="63" Unit="" BitInc="0" BytesInc="8388608" UnitOrigin="" EndPosition="63" UnitEndPosition="" LogicalUnit="" />
+      </Dimensions>
+      <FileLocation>E:\DATA\Alfred_Millett-Sikking\SALDA_figure\SALDA_testing_1.lif</FileLocation>
+      <StartTime>11/21/2025 5:30:57.518 PM</StartTime>
+      <EndTime>11/21/2025 5:31:26.178 PM</EndTime>
+      <FrameCount>64 (1 channels, 64 frames)</FrameCount>
+      <NumberOfChannels>1</NumberOfChannels>
+      <FluoDescription />
+    </ImageDescription>
+    <Attachment Name="TileScanInfo" Application="LAS AF" FlipX="0" FlipY="0" SwapXY="0">
+      <Tile FieldX="0" FieldY="0" PosX="0.0784960756" PosY="0.0338192422" PosZ="0.0011937465" />
+      <Tile FieldX="1" FieldY="0" PosX="0.0790945308" PosY="0.0338192422" PosZ="0.0011937465" />
+      <Tile FieldX="2" FieldY="0" PosX="0.0796929859" PosY="0.0338192422" PosZ="0.0011937465" />
+      <Tile FieldX="3" FieldY="0" PosX="0.0802914410" PosY="0.0338192422" PosZ="0.0011937465" />
+      <Tile FieldX="4" FieldY="0" PosX="0.0808898962" PosY="0.0338192422" PosZ="0.0011937465" />
+      <Tile FieldX="5" FieldY="0" PosX="0.0814883513" PosY="0.0338192422" PosZ="0.0011937465" />
+      <Tile FieldX="6" FieldY="0" PosX="0.0820868065" PosY="0.0338192422" PosZ="0.0011937465" />
+      <Tile FieldX="7" FieldY="0" PosX="0.0826852616" PosY="0.0338192422" PosZ="0.0011937465" />
+      <Tile FieldX="7" FieldY="1" PosX="0.0826852616" PosY="0.0344176973" PosZ="0.0011937465" />
+      <Tile FieldX="6" FieldY="1" PosX="0.0820868065" PosY="0.0344176973" PosZ="0.0011937465" />
+      <Tile FieldX="5" FieldY="1" PosX="0.0814883513" PosY="0.0344176973" PosZ="0.0011937465" />
+      <Tile FieldX="4" FieldY="1" PosX="0.0808898962" PosY="0.0344176973" PosZ="0.0011937465" />
+      <Tile FieldX="3" FieldY="1" PosX="0.0802914410" PosY="0.0344176973" PosZ="0.0011937465" />
+      <Tile FieldX="2" FieldY="1" PosX="0.0796929859" PosY="0.0344176973" PosZ="0.0011937465" />
+      <Tile FieldX="1" FieldY="1" PosX="0.0790945308" PosY="0.0344176973" PosZ="0.0011937465" />
+      <Tile FieldX="0" FieldY="1" PosX="0.0784960756" PosY="0.0344176973" PosZ="0.0011937465" />
+      <Tile FieldX="0" FieldY="2" PosX="0.0784960756" PosY="0.0350161525" PosZ="0.0011937465" />
+      <Tile FieldX="1" FieldY="2" PosX="0.0790945308" PosY="0.0350161525" PosZ="0.0011937465" />
+      <Tile FieldX="2" FieldY="2" PosX="0.0796929859" PosY="0.0350161525" PosZ="0.0011937465" />
+      <Tile FieldX="3" FieldY="2" PosX="0.0802914410" PosY="0.0350161525" PosZ="0.0011937465" />
+      <Tile FieldX="4" FieldY="2" PosX="0.0808898962" PosY="0.0350161525" PosZ="0.0011937465" />
+      <Tile FieldX="5" FieldY="2" PosX="0.0814883513" PosY="0.0350161525" PosZ="0.0011937465" />
+      <Tile FieldX="6" FieldY="2" PosX="0.0820868065" PosY="0.0350161525" PosZ="0.0011937465" />
+      <Tile FieldX="7" FieldY="2" PosX="0.0826852616" PosY="0.0350161525" PosZ="0.0011937465" />
+      <Tile FieldX="7" FieldY="3" PosX="0.0826852616" PosY="0.0356146076" PosZ="0.0011937465" />
+      <Tile FieldX="6" FieldY="3" PosX="0.0820868065" PosY="0.0356146076" PosZ="0.0011937465" />
+      <Tile FieldX="5" FieldY="3" PosX="0.0814883513" PosY="0.0356146076" PosZ="0.0011937465" />
+      <Tile FieldX="4" FieldY="3" PosX="0.0808898962" PosY="0.0356146076" PosZ="0.0011937465" />
+      <Tile FieldX="3" FieldY="3" PosX="0.0802914410" PosY="0.0356146076" PosZ="0.0011937465" />
+      <Tile FieldX="2" FieldY="3" PosX="0.0796929859" PosY="0.0356146076" PosZ="0.0011937465" />
+      <Tile FieldX="1" FieldY="3" PosX="0.0790945308" PosY="0.0356146076" PosZ="0.0011937465" />
+      <Tile FieldX="0" FieldY="3" PosX="0.0784960756" PosY="0.0356146076" PosZ="0.0011937465" />
+      <Tile FieldX="0" FieldY="4" PosX="0.0784960756" PosY="0.0362130628" PosZ="0.0011937465" />
+      <Tile FieldX="1" FieldY="4" PosX="0.0790945308" PosY="0.0362130628" PosZ="0.0011937465" />
+      <Tile FieldX="2" FieldY="4" PosX="0.0796929859" PosY="0.0362130628" PosZ="0.0011937465" />
+      <Tile FieldX="3" FieldY="4" PosX="0.0802914410" PosY="0.0362130628" PosZ="0.0011937465" />
+      <Tile FieldX="4" FieldY="4" PosX="0.0808898962" PosY="0.0362130628" PosZ="0.0011937465" />
+      <Tile FieldX="5" FieldY="4" PosX="0.0814883513" PosY="0.0362130628" PosZ="0.0011937465" />
+      <Tile FieldX="6" FieldY="4" PosX="0.0820868065" PosY="0.0362130628" PosZ="0.0011937465" />
+      <Tile FieldX="7" FieldY="4" PosX="0.0826852616" PosY="0.0362130628" PosZ="0.0011937465" />
+      <Tile FieldX="7" FieldY="5" PosX="0.0826852616" PosY="0.0368115179" PosZ="0.0011937465" />
+      <Tile FieldX="6" FieldY="5" PosX="0.0820868065" PosY="0.0368115179" PosZ="0.0011937465" />
+      <Tile FieldX="5" FieldY="5" PosX="0.0814883513" PosY="0.0368115179" PosZ="0.0011937465" />
+      <Tile FieldX="4" FieldY="5" PosX="0.0808898962" PosY="0.0368115179" PosZ="0.0011937465" />
+      <Tile FieldX="3" FieldY="5" PosX="0.0802914410" PosY="0.0368115179" PosZ="0.0011937465" />
+      <Tile FieldX="2" FieldY="5" PosX="0.0796929859" PosY="0.0368115179" PosZ="0.0011937465" />
+      <Tile FieldX="1" FieldY="5" PosX="0.0790945308" PosY="0.0368115179" PosZ="0.0011937465" />
+      <Tile FieldX="0" FieldY="5" PosX="0.0784960756" PosY="0.0368115179" PosZ="0.0011937465" />
+      <Tile FieldX="0" FieldY="6" PosX="0.0784960756" PosY="0.0374099731" PosZ="0.0011937465" />
+      <Tile FieldX="1" FieldY="6" PosX="0.0790945308" PosY="0.0374099731" PosZ="0.0011937465" />
+      <Tile FieldX="2" FieldY="6" PosX="0.0796929859" PosY="0.0374099731" PosZ="0.0011937465" />
+      <Tile FieldX="3" FieldY="6" PosX="0.0802914410" PosY="0.0374099731" PosZ="0.0011937465" />
+      <Tile FieldX="4" FieldY="6" PosX="0.0808898962" PosY="0.0374099731" PosZ="0.0011937465" />
+      <Tile FieldX="5" FieldY="6" PosX="0.0814883513" PosY="0.0374099731" PosZ="0.0011937465" />
+      <Tile FieldX="6" FieldY="6" PosX="0.0820868065" PosY="0.0374099731" PosZ="0.0011937465" />
+      <Tile FieldX="7" FieldY="6" PosX="0.0826852616" PosY="0.0374099731" PosZ="0.0011937465" />
+      <Tile FieldX="7" FieldY="7" PosX="0.0826852616" PosY="0.0380084282" PosZ="0.0011937465" />
+      <Tile FieldX="6" FieldY="7" PosX="0.0820868065" PosY="0.0380084282" PosZ="0.0011937465" />
+      <Tile FieldX="5" FieldY="7" PosX="0.0814883513" PosY="0.0380084282" PosZ="0.0011937465" />
+      <Tile FieldX="4" FieldY="7" PosX="0.0808898962" PosY="0.0380084282" PosZ="0.0011937465" />
+      <Tile FieldX="3" FieldY="7" PosX="0.0802914410" PosY="0.0380084282" PosZ="0.0011937465" />
+      <Tile FieldX="2" FieldY="7" PosX="0.0796929859" PosY="0.0380084282" PosZ="0.0011937465" />
+      <Tile FieldX="1" FieldY="7" PosX="0.0790945308" PosY="0.0380084282" PosZ="0.0011937465" />
+      <Tile FieldX="0" FieldY="7" PosX="0.0784960756" PosY="0.0380084282" PosZ="0.0011937465" />
+    </Attachment>
+    <Attachment Name="PreviewMarker" Application="LAS AF" IsPreviewImage="0" />
+    <Attachment Name="ChannelAttachment" Application="LAS AF" />
+    <Attachment Name="ImageXMLDocument" Application="LAS AF">
+      <RootNode />
+    </Attachment>
+    <Attachment Name="HardwareSetting" Application="LAS AF" Software="LAS X 3.10.0.28982" HardwareServerVersion="Build 28982" SystemType="10" SystemTypeName="AF 6000LX" DataSourceType="1" DataSourceTypeName="Camera">
+      <ATLCameraSettingDefinition ChannelToXmlMode="4">
+        <SEE_SEQUENTIAL_BLOCK />
+      </ATLCameraSettingDefinition>
+      <LDM_Block_Widefield_Sequential SequentialMode="2" BlockName="Job 1" ActiveSettingIndex="0">
+        <LDM_Block_Sequential_Master>
+          <ATLCameraSettingDefinition ChannelToXmlMode="3" VersionNumber="6" SpimMirrorMode="1" TheoCamSensorPixelSizeX="6.4999999999999996e-06" TheoCamSensorPixelSizeY="6.4999999999999996e-06" Gamma="1" Brightness="50" WhiteValue="65535" BlackValue="0" GainStringValue="0" IsGainUsedAsStringList="0" CanDoEMGain="0" CanDoColorSat="0" EMGainValue="1" OffsetValue="0" ColorSat="0" AutoBright="0" AutoExposure="0" AutoContrastGamma="0" BinningText="4.2MP, 2048x2048" ScanMode="xy" ZUseMode="2" ZUseModeName="z-wide" ZPosition="1,193.75 µm" IsSuperZ="0" Begin="0" End="0" Sections="1" CycleCount="1" CycleTime="0" UseMaxIterationsForT="0" CompleteTime="20.834657197654458" IsTimeMinimizeEnabled="0" LastTCalcMode="3" ValidBeginStack="0" ValidEndStack="0" StackCalculationMode="2" StackCalculationModeName="System optimized step size" ZStackDirectionMode="1" ZStackDirectionModeName="Unidirectional" IsLinkedShadingEnabled="1" IsImageAlignmentEnabled="0" IsDistortionCorrectionEnabled="0" IsSpectralUnmixingEnabled="0" AddRawDataToSpectralUnmixing="0" IsRGBImageEnabled="0" StageUseMode="7" StagePosX="78.5 mm" StagePosY="33.82 mm" StagePosID="-1" StageRangeX="0.12699993497599998" StageRangeY="0.082999957503999994" StageOrderNumber="11522100" FlipX="0" FlipY="0" SwapXY="0" Magnification="20" CanDoTotalVideoMag="1" TotalVideoMag="20" AutofocusChannel="1" IsAutofocusOnStart="0" AutofocusRedoEveryNTimePoints="0" ObjectiveName="HC PL APO    20x/0.80 DRY " ObjectiveNumber="11506529" ObjectivePos="1" SpinningDiskSliderIn="0" SpinningDiskPinholeDiameterInMicrons="50" MicroscopeModel="DMI8" IsInverseMicroscopeModel="1" ShutterMode="1" ShutterModeSoftware="1" CanDoIndustryShuttering="0" Immersion="DRY" NumericalAperture="0.80000000000000004" RefractionIndex="1" MountingMediumRefractionIndex="1.3300000000000001" CoverslipThickness="0.00017000000000000001" TubeOpticName="1" TubeOpticPos="0" TubeOpticPortMagPos="0" CanDoChangeSpeedAndPort="1" SpeedandPortIndex="1" SpeedandPort="0 MHz" SpeedandPortDescription="Fast scan" HasSpeedandPort="0" HasSpeedandPortDescription="1" CanDoColorCapture="0" CanDoMicroScanning="0" CanDoDualLightMode="0" CanDoLiveBinning="0" CanDoControlCooler="0" CanDoControlTemperature="0" CanDoFanControl="0" CanDoHotSpotCorrection="0" CanDoBrightnessCorrection="0" CanDoConversionGainMode="0" SCMOSReadoutMode="0" CanDoEnhancedAcquisitionMode="0" CurrentLightSheetFilterPosition="0" BinningValuePrecise="1" BinningXValuePrecise="1" BinningYValuePrecise="1" ZStackUseMode="1" NbStepsForEDOF="10" MaxNbStepsForStartUp="20" CalcEDoFfromZStack="0" CalcEDoFfromZStackForStartUp="0" EnhancedAcquisitionHDREnable="0" EnhancedAcquisitionHDRAutomatic="1" EnhancedAcquisitionHDRContrast="1" EnhancedAcquisitionHDRBrightness="50" IsSequencerAdvancedUseEnabled="1" PortCameraPercentage="100" UserManagementUserName="UserManagementFeatureInactive" IsMultiCam="0" AttachmentTimeStamp="1763775055">
+            <IndividualCameraGroup>
+              <PerCameraSetting MirrorX="1" MirrorY="1" />
+            </IndividualCameraGroup>
+            <Autofocus-config VersionNumber="3" Precision="4" FocusRange="8.0000000000000007e-05" ZUseMode="2" ZUseModeName="z-wide" AFAnalyseType="4" AFAnalyseTypeName="FirstChannelOnly" WorkflowTimelapse="2" WorkflowTimelapseName="AllTime" WorkflowTimelapseIterator="1" WorkflowXY="2" WorkflowXYName="AllPos" WorkflowXYIterator="1" UseFixSliceNumber="0" AFSubsystem="8" AFSubsystemName="HighSpeedAF" AFCOffset="-2" AFCActive="1" AFCAutonomousOffset="-2" AFCOnDemandZStackMode="0" AFCOnDemandZStackBorderOffset="-2" AutoFocusMode="2" AutoFocusModeName="FirstChannelOnly" AutofocusChannel="1" AutofocusChannelName="2000" OptimalStepSize="6.924652755448375e-07" PositionDimension="122" ReflectionOffset="0" WorkflowSettingMode="0" WorkflowSettingInterval="1" />
+            <AdditionalZPositionList>
+              <AdditionalZPosition Valid="1" SuperZMode="1" SuperZModeName="RestrictedRange" ZMode="2" ZUseModeName="z-wide" ZPosition="0.001193746455" />
+            </AdditionalZPositionList>
+            <Quantity Value="0" Unit="" />
+            <ZStackUseModeInfo ZStackUseMode="1" StackCalcMode="0" ValidBegin="0" ValidEnd="0" BeginValue="0" EndValue="0" NbSections="1">
+              <Quantity Value="0" Unit="" />
+            </ZStackUseModeInfo>
+            <WideFieldChannelConfigurator ThisIsHSAutofocusInstance="0" WFCCVersion="1" MicroscopeFamilyType="2" CameraName="Hamamatsu-C13440-20CU-301990" CameraType="480" CameraNamePure="Hamamatsu-C13440-20CU" MaxChannelCount="8" CurrentChannelIndex="0" IsSequencerBoard="1" IsSequencerAdvancedBoard="1" IsTriggerCamera="1" eZUseMode="0" eStackFlowMode="2" IsUseSameExposureTime="0" SameExposureTime="0.100016117" IsHighSpeedModeActive="0" IsSequencerUseEnabled="0" IsSequencerAdvancedUseEnabled="1" EStageAFCModeForSeqAdv="0" IsSimpleOperation="0" CanDoTIRF="1" TIRFPenetrationDepthMode="1" SameTIRFPenetrationDepthIndex="0" SameTIRFApertureValue="0" TIRFManualMode="0" IsTIRFFastIlluminationSwitchingActive="0" InTrigger="-1" OutTrigger="-1" InTriggerMode="-1" OutTriggerMode="-1" m_sInTrigger="-1" m_sInTriggerMode="-1" m_sInTriggerShowInGraph="1" m_sInTriggerRecordInEventlist="1" m_sInTriggerDescription="" m_sOutTrigger="-1" m_sOutTriggerMode="-1" m_sOutTriggerShowInGraph="1" m_sOutTriggerRecordInEventlist="1" m_sOutTriggerDescription="" m_sOutTriggerOnStart="-1" m_sOutTriggerOnStartMode="-1" m_sOutTriggerOnStartShowInGraph="1" m_sOutTriggerOnStartRecordInEventlist="1" m_sOutTriggerOnStartDescription="" m_sOutTriggerOnEnd="-1" m_sOutTriggerOnEndMode="-1" m_sOutTriggerOnEndShowInGraph="1" m_sOutTriggerOnEndRecordInEventlist="1" m_sOutTriggerOnEndDescription="" WFCCCameranRoiLeft="0" WFCCCameranRoiTop="0" WFCCCameranRoiWidth="1" WFCCCameranRoiHeight="1" WFCCCameranRoiIsUsed="0" WFCCCameranRoiDefinitionBinning="1" ILLEDCanDoChangeWavelength="0" ILLEDCanDoCombineWavelengths="1" ILLEDMaxWavelengths="0" ILLEDCanDoCombiLightSource="0" ILLEDUIMode="1" ILLEDCodedSliderPos="3" CanDoDIC="1" CanDoSpinningDisk="0" CanDoCondenser="1" ObjectiveArtNo="11506529" ObjectiveName="HC PL APO 20 x" bIsDiaphragmStoreModeEnabled="0" bIsDICStoreModeEnabled="0" IsSimAcqActive="0" CanDoStageRotation="0" StageRotationAngle="0" CanDoColumnTilt="0" ColumnTiltAngle="0" UseSpinDisk="0" CMountMagnification="0" ScanheadDiaphragm="-1" ScanheadAttenuator="-1" ScanheadAfocalLens="-1" ScanheadVelocity="-1" WFLaserManipulationTimeCourseExperimentSettings="">
+              <AdvancedCameraFeatures Advanced_Camera_Features_Activated="0">
+                <CameraFeature Name="Image Streaming" Camera_Feature_420_Value="" Camera_Feature_420_Enabled="0" Camera_Feature_420_UIEnabled="1" />
+                <CameraFeature Name="Shutter Mode" Camera_Feature_100280_Value="Rolling Shutter" Camera_Feature_100280_Enabled="0" Camera_Feature_100280_UIEnabled="1" />
+              </AdvancedCameraFeatures>
+            </WideFieldChannelConfigurator>
+            <CameraFormat xDim="2048" yDim="2048" Resolution="16" IsGray="1" Binning="1" LiveBinning="1" ColorCaptureMode="0" />
+            <CameraFormat xDim="2048" yDim="2048" Resolution="16" IsGray="1" Binning="1" LiveBinning="1" ColorCaptureMode="0" />
+            <XYStageConfiguratorSettings>
+              <StitchingSettings IsAutoStitching="1" OverlapXmanual="6.6527500000000003e-05" OverlapYmanual="6.6527500000000003e-05" OverlapPercentageX="0.10000000000000001" OverlapPercentageY="0.10000000000000001" />
+              <Misc />
+            </XYStageConfiguratorSettings>
+          </ATLCameraSettingDefinition>
+        </LDM_Block_Sequential_Master>
+        <LDM_Block_Sequential_List>
+          <ATLCameraSettingDefinition ChannelToXmlMode="2" VersionNumber="6" IsEnabledForSequentialScanning="1" UserManagementUserName="UserManagementFeatureInactive">
+            <WideFieldChannelConfigurator ThisIsHSAutofocusInstance="0">
+              <WideFieldChannelInfo Channel="2000" FluoCubePos="1" Intensity="1" IntensityMode="210" ContrastingMethodName="FLUO" ContrastingMethod="205" SpinDiskFilterSetPosition="0" UserDefName="DIC" FluoCubeName="GFP-T" EmissionWavelength="0" DyeName="" LUT="" SpinDiskFilterSetName="unknown" ColorGainValueR="0" ColorGainValueG="0" ColorGainValueB="0" WhiteBalanceBaseValueR="0" WhiteBalanceBaseValueG="0" WhiteBalanceBaseValueB="0" ColorWheelValueR="0" ColorWheelValueG="0" ColorWheelValueB="0" TL_Light-Intensity="60" IL_Light-Intensity="1" IFW_Light-Intensity="-1" TL_Shutter="1" IL_Shutter="1" FieldDiaphragmValue="12" ApertureDiaphragmValue="4" OnlineShadingCorrectionReferenceImageName="" TIRF_WaveLength="0" TIRF_Azimuth="0" TIRF_PenetrationDepthIndex="0" TIRF_Aperture="0" TIRF_PenetrationDepthFromAperture="0" TIRF_PenetrationDepth="0" TIRF_FastIlluminationSwitchingMode="0" TIRF_LaserIntensity="0" ILLEDMaxUsedChannels="0" ILLEDIsValid="0" TIRFFastIlluminationSwitchingMode="0" AFCApplicable="1" DICPos="3" DICLensName="" CondenserPos="4" CondenserLensName="" ObliqueMode="0" ObliqueValue="-1" IMCXOffset="0">
+                <FastFilterWheelChannelInfoArray>
+                  <FastFilterWheelChannelInfo FastFilterWheelChannelInfo_HWIndex="1" FastFilterWheelChannelInfo_ActualPosition="4" FastFilterWheelChannelInfo_LastUsedPosition="4" FastFilterWheelChannelInfo_Name="100%" />
+                  <FastFilterWheelChannelInfo FastFilterWheelChannelInfo_HWIndex="2" FastFilterWheelChannelInfo_ActualPosition="4" FastFilterWheelChannelInfo_LastUsedPosition="4" FastFilterWheelChannelInfo_Name="100%" />
+                </FastFilterWheelChannelInfoArray>
+                <IndividualCameraInfoArray>
+                  <IndividualCameraInfo LUT="Gray" ExposureTime="100.016 ms" Active="1" Gain="1" EMGain="1" GainString="0" StringGainName="" EmissionWavelength="530" ExcitationWavelength="475" FullCameraName="Hamamatsu-C13440-20CU-301990" BlackValue="0" WhiteValue="1" GammaValue="1" BackgroundLUT="" FluoChromeName="" />
+                </IndividualCameraInfoArray>
+              </WideFieldChannelInfo>
+              <AdvancedCameraFeatures Advanced_Camera_Features_Activated="0" />
+            </WideFieldChannelConfigurator>
+          </ATLCameraSettingDefinition>
+          <ATLCameraSettingDefinition ChannelToXmlMode="2" VersionNumber="6" IsEnabledForSequentialScanning="1" UserManagementUserName="UserManagementFeatureInactive">
+            <WideFieldChannelConfigurator ThisIsHSAutofocusInstance="1" AutoFocusHSActive="0">
+              <WideFieldChannelInfo Channel="2000" FluoCubePos="5" Intensity="60" IntensityMode="100" ContrastingMethodName="TL-DIC" ContrastingMethod="103" SpinDiskFilterSetPosition="0" UserDefName="New 1" FluoCubeName="Ana_TL" EmissionWavelength="0" DyeName="" LUT="" SpinDiskFilterSetName="unknown" ColorGainValueR="0" ColorGainValueG="0" ColorGainValueB="0" WhiteBalanceBaseValueR="0" WhiteBalanceBaseValueG="0" WhiteBalanceBaseValueB="0" ColorWheelValueR="0" ColorWheelValueG="0" ColorWheelValueB="0" TL_Light-Intensity="60" IL_Light-Intensity="5" IFW_Light-Intensity="-1" TL_Shutter="0" IL_Shutter="0" FieldDiaphragmValue="-1" ApertureDiaphragmValue="-1" OnlineShadingCorrectionReferenceImageName="" TIRF_WaveLength="0" TIRF_Azimuth="0" TIRF_PenetrationDepthIndex="0" TIRF_Aperture="0" TIRF_PenetrationDepthFromAperture="0" TIRF_PenetrationDepth="0" TIRF_FastIlluminationSwitchingMode="2" TIRF_LaserIntensity="0" ILLEDMaxUsedChannels="0" ILLEDIsValid="0" TIRFFastIlluminationSwitchingMode="2" AFCApplicable="1" DICPos="0" DICLensName="C" CondenserPos="2" CondenserLensName="-" ObliqueMode="0" ObliqueValue="-1" IMCXOffset="0">
+                <FastFilterWheelChannelInfoArray>
+                  <FastFilterWheelChannelInfo FastFilterWheelChannelInfo_HWIndex="1" FastFilterWheelChannelInfo_ActualPosition="4" FastFilterWheelChannelInfo_LastUsedPosition="4" FastFilterWheelChannelInfo_Name="100%" />
+                  <FastFilterWheelChannelInfo FastFilterWheelChannelInfo_HWIndex="2" FastFilterWheelChannelInfo_ActualPosition="4" FastFilterWheelChannelInfo_LastUsedPosition="4" FastFilterWheelChannelInfo_Name="100%" />
+                </FastFilterWheelChannelInfoArray>
+                <IndividualCameraInfoArray>
+                  <IndividualCameraInfo LUT="Gray" ExposureTime="100.016 ms" Active="1" Gain="1" EMGain="1" GainString="0" StringGainName="" EmissionWavelength="550" ExcitationWavelength="550" FullCameraName="Hamamatsu-C13440-20CU-301990" BlackValue="0" WhiteValue="1" GammaValue="1" BackgroundLUT="" FluoChromeName="" />
+                </IndividualCameraInfoArray>
+              </WideFieldChannelInfo>
+              <AdvancedCameraFeatures Advanced_Camera_Features_Activated="0" />
+            </WideFieldChannelConfigurator>
+          </ATLCameraSettingDefinition>
+        </LDM_Block_Sequential_List>
+        <LDM_Block_Sequential_Execution_Mask>
+          <InstrumentSettingMask Shutter="1" Frame_Average="1" Line_Average="1" AOTF="1" Attenuator_Wheel="1" Laser_Gain_Offset="1" PMTs_on_off="1" PMTs_Gain_Offset="1" Timegate="1" HyDs_Acquistion_Mode="1" HyDs_Pulse_Calibr_Value="1" FilterWheel="1" Variable_Beam_Expander="1" Microscope="1" Pinhole="1" Z_Compensation="1" Spectrophotometer="1" Mot_Corr_Ring="0" Frame_Accumulation="1" Line_Accumulation="1" Laser="1" STED_DelayTime="1" />
+        </LDM_Block_Sequential_Execution_Mask>
+      </LDM_Block_Widefield_Sequential>
+    </Attachment>
+    <Attachment Name="Coordinate" Application="LAS AF">
+      <Coordinate Name="ChamberU" Value="0" />
+      <Coordinate Name="ChamberV" Value="0" />
+      <Coordinate Name="FieldX" Value="0" />
+      <Coordinate Name="FieldY" Value="0" />
+    </Attachment>
+    <Attachment Name="InScanProcessing" Application="LAS AF">
+      <CameraLane0>
+        <ShadingProcessingStep>
+          <ShadingReferenceID_UsedSetting_0>---</ShadingReferenceID_UsedSetting_0>
+        </ShadingProcessingStep>
+      </CameraLane0>
+    </Attachment>
+    <Attachment Name="ViewerScaling" Application="LAS AF" Version="1.0">
+      <ChannelScalingInfo BackgroundLutName="" BlackValue="0.043961242084" WhiteValue="0.191866941329" GammaValue="1.0000000000" Automatic="0" />
+    </Attachment>
+    <TimeStampList NumberOfTimeStamps="64" FirstTimeStampDate="11/21/2025" FirstTimeStampTime="5:30:57 PM" FirstTimeStampMiliSeconds="518">1dc5b4fa6ea4fe0 1dc5b4fa74456d0 1dc5b4fa7841ee0 1dc5b4fa7c2d5a0 1dc5b4fa80276b0 1dc5b4fa8432930 1dc5b4fa8a10090 1dc5b4fa8e0c8c0 1dc5b4fa91f7f70 1dc5b4fa95eab40 1dc5b4fa99ec190 1dc5b4fa9f93da0 1dc5b4faa38b7a0 1dc5b4faa779550 1dc5b4faab75d80 1dc5b4faaf6b060 1dc5b4fab5439c0 1dc5b4fab938ca0 1dc5b4fabd2dfa0 1dc5b4fac1280b0 1dc5b4fac51fab0 1dc5b4facaf0ec0 1dc5b4faceed6f0 1dc5b4fad2f8970 1dc5b4fad7b3870 1dc5b4fadbb4eb0 1dc5b4fae175150 1dc5b4fae57dcc0 1dc5b4fae9756d0 1dc5b4faed65ba0 1dc5b4faf1698e0 1dc5b4faf724d70 1dc5b4fafb215a0 1dc5b4faff16880 1dc5b4fb0310990 1dc5b4fb0705c90 1dc5b4fb0cb4dc0 1dc5b4fb10ac7c0 1dc5b4fb14a1ac0 1dc5b4fb188d160 1dc5b4fb1c82460 1dc5b4fb2247530 1dc5b4fb2641640 1dc5b4fb2a3de50 1dc5b4fb2e33150 1dc5b4fb3240ad0 1dc5b4fb37fe680 1dc5b4fb3bf3960 1dc5b4fb3ff0190 1dc5b4fb43ddf40 1dc5b4fb47f2e10 1dc5b4fb4d9d130 1dc5b4fb518fd10 1dc5b4fb558c520 1dc5b4fb5983f30 1dc5b4fb5d71cf0 1dc5b4fb629f7e0 1dc5b4fb668ae80 1dc5b4fb6a7da70 1dc5b4fb6e6b820 1dc5b4fb72595f0 1dc5b4fb7814a80 1dc5b4fb7c0c480 1dc5b4fb7ff7b20 <TimeStamp RelativeTime="0.000" Date="11/21/2025" Time="5:30:57 PM" MiliSeconds="518" /><TimeStamp RelativeTime="0.590" Date="11/21/2025" Time="5:30:58 PM" MiliSeconds="109" /><TimeStamp RelativeTime="1.008" Date="11/21/2025" Time="5:30:58 PM" MiliSeconds="526" /><TimeStamp RelativeTime="1.419" Date="11/21/2025" Time="5:30:58 PM" MiliSeconds="938" /><TimeStamp RelativeTime="1.836" Date="11/21/2025" Time="5:30:59 PM" MiliSeconds="355" /><TimeStamp RelativeTime="2.260" Date="11/21/2025" Time="5:30:59 PM" MiliSeconds="779" /><TimeStamp RelativeTime="2.875" Date="11/21/2025" Time="5:31:00 PM" MiliSeconds="393" /><TimeStamp RelativeTime="3.293" Date="11/21/2025" Time="5:31:00 PM" MiliSeconds="812" /><TimeStamp RelativeTime="3.704" Date="11/21/2025" Time="5:31:01 PM" MiliSeconds="223" /><TimeStamp RelativeTime="4.118" Date="11/21/2025" Time="5:31:01 PM" MiliSeconds="636" /><TimeStamp RelativeTime="4.538" Date="11/21/2025" Time="5:31:02 PM" MiliSeconds="057" /><TimeStamp RelativeTime="5.131" Date="11/21/2025" Time="5:31:02 PM" MiliSeconds="650" /><TimeStamp RelativeTime="5.547" Date="11/21/2025" Time="5:31:03 PM" MiliSeconds="066" /><TimeStamp RelativeTime="5.959" Date="11/21/2025" Time="5:31:03 PM" MiliSeconds="477" /><TimeStamp RelativeTime="6.377" Date="11/21/2025" Time="5:31:03 PM" MiliSeconds="896" /><TimeStamp RelativeTime="6.792" Date="11/21/2025" Time="5:31:04 PM" MiliSeconds="310" /><TimeStamp RelativeTime="7.405" Date="11/21/2025" Time="5:31:04 PM" MiliSeconds="924" /><TimeStamp RelativeTime="7.820" Date="11/21/2025" Time="5:31:05 PM" MiliSeconds="338" /><TimeStamp RelativeTime="8.235" Date="11/21/2025" Time="5:31:05 PM" MiliSeconds="754" /><TimeStamp RelativeTime="8.652" Date="11/21/2025" Time="5:31:06 PM" MiliSeconds="171" /><TimeStamp RelativeTime="9.068" Date="11/21/2025" Time="5:31:06 PM" MiliSeconds="587" /><TimeStamp RelativeTime="9.678" Date="11/21/2025" Time="5:31:07 PM" MiliSeconds="196" /><TimeStamp RelativeTime="10.096" Date="11/21/2025" Time="5:31:07 PM" MiliSeconds="615" /><TimeStamp RelativeTime="10.520" Date="11/21/2025" Time="5:31:08 PM" MiliSeconds="039" /><TimeStamp RelativeTime="11.016" Date="11/21/2025" Time="5:31:08 PM" MiliSeconds="535" /><TimeStamp RelativeTime="11.436" Date="11/21/2025" Time="5:31:08 PM" MiliSeconds="955" /><TimeStamp RelativeTime="12.039" Date="11/21/2025" Time="5:31:09 PM" MiliSeconds="557" /><TimeStamp RelativeTime="12.462" Date="11/21/2025" Time="5:31:09 PM" MiliSeconds="980" /><TimeStamp RelativeTime="12.878" Date="11/21/2025" Time="5:31:10 PM" MiliSeconds="397" /><TimeStamp RelativeTime="13.291" Date="11/21/2025" Time="5:31:10 PM" MiliSeconds="810" /><TimeStamp RelativeTime="13.712" Date="11/21/2025" Time="5:31:11 PM" MiliSeconds="230" /><TimeStamp RelativeTime="14.313" Date="11/21/2025" Time="5:31:11 PM" MiliSeconds="831" /><TimeStamp RelativeTime="14.731" Date="11/21/2025" Time="5:31:12 PM" MiliSeconds="250" /><TimeStamp RelativeTime="15.146" Date="11/21/2025" Time="5:31:12 PM" MiliSeconds="664" /><TimeStamp RelativeTime="15.563" Date="11/21/2025" Time="5:31:13 PM" MiliSeconds="081" /><TimeStamp RelativeTime="15.978" Date="11/21/2025" Time="5:31:13 PM" MiliSeconds="497" /><TimeStamp RelativeTime="16.574" Date="11/21/2025" Time="5:31:14 PM" MiliSeconds="092" /><TimeStamp RelativeTime="16.990" Date="11/21/2025" Time="5:31:14 PM" MiliSeconds="508" /><TimeStamp RelativeTime="17.405" Date="11/21/2025" Time="5:31:14 PM" MiliSeconds="924" /><TimeStamp RelativeTime="17.816" Date="11/21/2025" Time="5:31:15 PM" MiliSeconds="334" /><TimeStamp RelativeTime="18.231" Date="11/21/2025" Time="5:31:15 PM" MiliSeconds="750" /><TimeStamp RelativeTime="18.836" Date="11/21/2025" Time="5:31:16 PM" MiliSeconds="355" /><TimeStamp RelativeTime="19.253" Date="11/21/2025" Time="5:31:16 PM" MiliSeconds="772" /><TimeStamp RelativeTime="19.671" Date="11/21/2025" Time="5:31:17 PM" MiliSeconds="189" /><TimeStamp RelativeTime="20.086" Date="11/21/2025" Time="5:31:17 PM" MiliSeconds="605" /><TimeStamp RelativeTime="20.511" Date="11/21/2025" Time="5:31:18 PM" MiliSeconds="029" /><TimeStamp RelativeTime="21.113" Date="11/21/2025" Time="5:31:18 PM" MiliSeconds="632" /><TimeStamp RelativeTime="21.528" Date="11/21/2025" Time="5:31:19 PM" MiliSeconds="046" /><TimeStamp RelativeTime="21.946" Date="11/21/2025" Time="5:31:19 PM" MiliSeconds="465" /><TimeStamp RelativeTime="22.358" Date="11/21/2025" Time="5:31:19 PM" MiliSeconds="876" /><TimeStamp RelativeTime="22.786" Date="11/21/2025" Time="5:31:20 PM" MiliSeconds="305" /><TimeStamp RelativeTime="23.380" Date="11/21/2025" Time="5:31:20 PM" MiliSeconds="899" /><TimeStamp RelativeTime="23.794" Date="11/21/2025" Time="5:31:21 PM" MiliSeconds="313" /><TimeStamp RelativeTime="24.212" Date="11/21/2025" Time="5:31:21 PM" MiliSeconds="730" /><TimeStamp RelativeTime="24.628" Date="11/21/2025" Time="5:31:22 PM" MiliSeconds="147" /><TimeStamp RelativeTime="25.040" Date="11/21/2025" Time="5:31:22 PM" MiliSeconds="559" /><TimeStamp RelativeTime="25.583" Date="11/21/2025" Time="5:31:23 PM" MiliSeconds="102" /><TimeStamp RelativeTime="25.994" Date="11/21/2025" Time="5:31:23 PM" MiliSeconds="512" /><TimeStamp RelativeTime="26.408" Date="11/21/2025" Time="5:31:23 PM" MiliSeconds="927" /><TimeStamp RelativeTime="26.820" Date="11/21/2025" Time="5:31:24 PM" MiliSeconds="338" /><TimeStamp RelativeTime="27.232" Date="11/21/2025" Time="5:31:24 PM" MiliSeconds="751" /><TimeStamp RelativeTime="27.833" Date="11/21/2025" Time="5:31:25 PM" MiliSeconds="352" /><TimeStamp RelativeTime="28.249" Date="11/21/2025" Time="5:31:25 PM" MiliSeconds="768" /><TimeStamp RelativeTime="28.660" Date="11/21/2025" Time="5:31:26 PM" MiliSeconds="178" /></TimeStampList>
+  </Image>
+</Data>
