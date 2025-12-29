@@ -1,0 +1,493 @@
+<!doctype html>
+<!-- 
+This publication template is based on the one created by Andrew G York:
+https://github.com/AndrewGYork/publication_template . Thanks Andrew!
+
+Based on this theme: https://github.com/broccolini/dinky , which mentioned that 
+attribution is appreciated. Thanks, broccolini!
+-->
+<html lang="en">
+  <head>
+    <base target="_blank">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SALDA_for_timelapse_microscopy_appendix</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">SALDA for timelapse microscopy</h1>
+        <ul>
+          <li class="download"><a class="buttons" 
+		  href="https://github.com/amsikking/SALDA_for_timelapse_microscopy/zipball/master">Download ZIP</a></li>
+          <li><a class="buttons github" 
+		  href="https://github.com/amsikking/SALDA_for_timelapse_microscopy">View On GitHub</a></li>
+          <li><a class="buttons pdf" 
+		  href="./SALDA_for_timelapse_microscopy_appendix.pdf">Download PDF</a></li>
+        </ul>
+        <p class="header">This project is maintained by 
+		<a class="header name" href="https://amsikking.github.io/">amsikking</a> from 
+		
+		<!-- TODO: update group website -->
+		
+		<!-- <a class="header name" href="https://amsikking.github.io/">Calico Automation</a>, and was funded by  -->
+		Calico Automation, and was funded by 
+		<a class="header name" href="https://www.calicolabs.com/">Calico Life Sciences LLC</a></p>
+      </header>
+<!-- 
+##############################################################
+The real text begins here.
+##############################################################
+ -->
+<section>
+<h1>Appendix</h1>
+<h3 class="onlyprint">
+Note that this is a limited PDF or print version; animated and interactive figures are disabled. For the full version 
+of this article, please visit one of the following links: 
+<a href="https://amsikking.github.io/SALDA_for_timelapse_microscopy">
+https://amsikking.github.io/SALDA_for_timelapse_microscopy</a>
+</h3>
+<noscript>
+<h3>Your browser doesn't seem to support Javascript. This document uses Javascript for interactive figures, math 
+typesetting, and to automatically generate the reference list. Either activate Javascript, or use the "Download PDF" 
+link above if you want properly typeset math and a reference list.</h3>
+</noscript>
+<h2>A simple automatic liquid dispense arrangement (SALDA) for timelapse microscopy</h2>
+<p><a href="./index.html" title="Main text" target="_self">Back to the main text</a></p>
+
+<h3 id="multiwell_samples">Multiwell samples</h3>
+<p>
+Multiwell samples are somewhat varied in size and specification so it can be challenging to foresee and accommodate all options. However, we found that most of our users were using either chambered coverslips or multiwell plates in the following formats:
+</p>
+
+<div id="table_multiwell_samples">
+<style>
+#table_multiwell_samples table, #table_multiwell_samples th, #table_multiwell_samples td {
+border:1px solid black; text-align:center; padding:1px; font-size:small;}
+</style>
+<table>
+<caption style="caption-side: bottom;">(well size and spacing is X mm x Y mm x Z mm and X mm x Y mm respectively).</caption>
+  <tr><th>Format</th>
+  <th>Well size (mm)</th>		<th>Well spacing (mm)</th> 	<th>Vol. (&mu;l)</th> 	<th>Coverslip (&mu;m)</th></tr>
+ 
+  <tr><td><a href="figures/multiwell_samples/cellvis_C8SB-1.5H_8_well_chambered.pdf" target="_self">
+  Cellvis 8 well chambered</a></td>
+  <td>9.3 x 8.9 x 10.8</td>		<td>11.52 x 11.04</td>		<td>889</td>			<td>170 ± 5 glass</td></tr> 
+
+  <tr><td><a href="figures/multiwell_samples/cellvis_C8-1.5H-N_8_well_chambered_short.pdf" target="_self">
+  Cellvis 8 well chambered (short)</a></td>
+  <td>9.3 x 8.7 x 10.8</td>		<td>11.57 x 11.20</td>		<td>874</td>			<td>170 ± 5 glass</td></tr>
+
+  <tr><td><a href="figures/multiwell_samples/cellvis_C18SB-1.5H_18_well_chambered.pdf" target="_self">
+  Cellvis 18 well chambered</a></td>
+  <td>6.1 x 5.7 x 10.8</td>		<td>7.56 x 7.14</td>		<td>369</td>			<td>170 ± 5 glass</td></tr>
+
+  <tr><td><a href="figures/multiwell_samples/cellvis_C18-1.5H_18_well_chambered_short.pdf" target="_self">
+  Cellvis 18 well chambered (short)</a></td>
+  <td>6.1 x 5.7 x 10.8</td>		<td>7.56 x 7.14</td>		<td>370</td>			<td>170 ± 5 glass</td></tr>
+
+  <tr><td><a href="figures/multiwell_samples/cellvis_P96-1.5H-N_96_well_plate.pdf" target="_self">
+  Cellvis 96 well plate</a></td>
+  <td>6.2 x dia x 11.9</td>		<td>9.00 x 9.00</td>		<td>361</td>			<td>170 ± 5 glass</td></tr>
+
+  <tr><td><a href="figures/multiwell_samples/cellvis_P384-1.5H-N_384_well_plate.pdf" target="_self">
+  Cellvis 384 well plate</a></td>
+  <td>3.3 x 3.3 x 11.4</td>		<td>4.50 x 4.50</td>		<td>124</td>			<td>170 ± 5 glass</td></tr>
+
+  <tr><td><a href="figures/multiwell_samples/ibidi_80826_8_well_chambered.pdf" target="_self">
+  Ibidi 8 well chambered</a></td>
+  <td>10.7 x 9.4 x 6.8</td>		<td>? x ?</td>				<td>684</td>			<td>#1.5 polymer</td></tr>
+
+  <tr><td><a href="figures/multiwell_samples/ibidi_80807_8_well_chambered_high.pdf" target="_self">
+  Ibidi 8 well chambered (high)</a></td>
+  <td>10.7 x 9.4 x 9.3</td>		<td>12.20 x 10.90</td>		<td>935</td>			<td>170 ± 5 glass</td></tr>
+
+  <tr><td><a href="figures/multiwell_samples/ibidi_81811_18_well_chambered.pdf" target="_self">
+  Ibidi 18 well chambered</a></td>
+  <td>6.1 x 5.7 x 6.8</td>		<td>8.10 x 7.45</td>		<td>236</td>			<td>180 polymer</td></tr>
+
+  <tr><td><a href="figures/multiwell_samples/revvity_6055308_96_well_plate.pdf" target="_self">
+  Revvity 96 well plate</a></td>
+  <td>6.4 x dia x 12.7</td>		<td>9.00 x 9.00</td>		<td>408</td>			<td>200 ± 10 polymer</td></tr>
+
+  <tr><td><a href="figures/multiwell_samples/revvity_6057308_384_well_plate.pdf" target="_self">
+  Revvity 384 well plate</a></td>
+  <td>3.3 x 3.3 x 12.9</td>		<td>4.50 x 4.50</td>		<td>137</td>			<td>200 ± 10 polymer</td></tr>
+</table>
+</div>
+
+<p>
+So in practice the usable volumes range from ~100 &mu;l to ~900 &mu;l and the well heights from 6.8 mm to 12.9 mm (the max overall height goes up to 14.35 mm for Revvity well plates).
+</p>
+
+<h3 id="fluidic_connectors">Fluidic connectors</h3>
+<p>
+We use a Luer adaptor (<a href="figures/fluidics/idex_P-628_luer_adapter.png" target="_self">IDEX P-648</a>), ferrule (<a href="figures/fluidics/idex_P-248X_ferrule.png" target="_self">IDEX P-248X</a>) and nut (<a href="figures/fluidics/idex_P-255_nut.png" target="_self">IDEX P-255</a>) to make a reliable connection between the delivery tube and the syringe. Simply slide the parts onto the delivery tube and firmly tighten the nut onto the Luer adaptor with fingers (<a href="#fig_fluidic_connectors" target="_self">Figure A1</a>).
+</p>
+<p>
+<strong>Note:</strong> the ferrule permanently binds to the tube and cannot be easily moved or removed. So it's important to place the ferrule in the correct location before final tightening (i.e. at the end of the tube, either flush or with a small amount protruding).
+</p>
+
+<figure id="fig_fluidic_connectors">
+<img src="figures/fluidics/fluidic_connectors.jpg" alt="Figure A1" id="fig_A1_img" style="width:100%;">
+<figcaption>
+<strong>Figure A1: fluidic connectors.</strong> 
+<strong>a)</strong> a Luer adaptor that connects to the syringe (<a href="figures/fluidics/idex_P-628_luer_adapter.png" target="_self">IDEX P-648</a>), <strong>b)</strong> a 2 part ferrule that binds to the delivery tube (<a href="figures/fluidics/idex_P-248X_ferrule.png" target="_self">IDEX P-248X</a>) and <strong>c)</strong> a nut that compresses the ferrule against the Luer adaptor (<a href="figures/fluidics/idex_P-255_nut.png" target="_self">IDEX P-255</a>).
+</figcaption>
+</figure>
+<p></p>
+
+<h3 id="delivery_tubes">Delivery tubes</h3>
+<p>
+We tested delivery tubes with different dimensions, materials and terminations, with both water and media to reach a preferred configuration.
+</p>
+
+<h4 id="deliver_tubes_preferred">Preferred delivery tubes</h4>
+<div id="table_deliver_tubes_preferred">
+<style>
+#table_deliver_tubes_preferred table, #table_deliver_tubes_preferred th, #table_deliver_tubes_preferred td {
+border:1px solid black; text-align:center; padding:1px; font-size:small;}
+</style>
+<table>
+  <tr><th>ID</th> <th>Type (part)</th>
+  <th>OD (in)</th>		<th>ID (in)</th> 	<th>OD (mm)</th> 	<th>ID (mm)</th>	<th>Termination</th></tr>
+ 
+  <tr><td>1</td><td><a href="figures/fluidics/zues_SWTT-30-C_PTFE_tube_30AWG.pdf" target="_self">
+  PTFE AWG 30 (Zues SWTT-30-C)</a></td>
+  <td>0.030</td>		<td>0.012</td>		<td>0.762</td>		<td>0.305</td>		<td>clean 90&deg; cut</td></tr> 
+
+  <tr><td>2</td><td><a href="figures/fluidics/idex_1568XL_PEEK_tube_1o32inOD.png" target="_self">
+  PEEK natural (IDEX 1568XL)</a></td>
+  <td>1/32</td>		<td>0.015</td>		<td>0.794</td>		<td>0.381</td>		<td>clean 90&deg; cut</td></tr>
+</table>
+</div>
+
+<p>
+In general the PTFE tubing (1) is preferable for many applications due to it's lower cost, excellent chemical resistance and higher water contact angle which results in more accurate dispenses (especially for 'sticky' liquids). However, the PEEK tubing (2) is a solid backup with greater stiffness, strength and wear resistance, and is typically made to tight tolerance. Both materials can operate at high temperatures (~260°C).
+</p>
+
+<h4 id="deliver_tubes_tested">Tested delivery tubes</h4>
+<div id="table_deliver_tubes_tested">
+<style>
+#table_deliver_tubes_tested table, #table_deliver_tubes_tested th, #table_deliver_tubes_tested td {
+border:1px solid black; text-align:center; padding:1px; font-size:small;}
+</style>
+<table>
+  <tr><th>ID</th> <th>Type (part)</th>
+  <th>OD (in)</th>		<th>ID (in)</th> 	<th>OD (mm)</th> 	<th>ID (mm)</th>	<th>Termination</th></tr>
+ 
+  <tr><td>3</td><td>
+  PTFE AWG 32 (Zues SWTT-32-C)</td>
+  <td>0.020</td>		<td>0.010</td>		<td>0.508</td>		<td>0.254</td>		<td>clean 90&deg; cut</td></tr> 
+
+  <tr><td>4</td><td>
+  PEEK natural (IDEX 1568XL)</td>
+  <td>1/32</td>		<td>0.015</td>		<td>0.794</td>		<td>0.381</td>		<td>clean 45&deg; cut</td></tr>
+
+  <tr><td>5</td><td>
+  PEEK natural (IDEX 1568XL)</td>
+  <td>1/32</td>		<td>0.015</td>		<td>0.794</td>		<td>0.381</td>		<td>squashed 90&deg; cut</td></tr>
+  
+  <tr><td>6</td><td>
+  PEEK blue (IDEX 1581L)</td>
+  <td>1/32</td>		<td>0.010</td>		<td>0.794</td>		<td>0.254</td>		<td>clean 90&deg; cut</td></tr>
+
+  <tr><td>7</td><td>
+  PEEK red (IDEX 1576L)</td>
+  <td>1/32</td>		<td>0.005</td>		<td>0.794</td>		<td>0.127</td>		<td>clean 90&deg; cut</td></tr>
+  
+</table>
+</div>
+
+<p>
+From the results of the preferred PTFE tubing (1) it seemed like PTFE tubing with an even smaller outer diameter (OD) and  slightly smaller inner diameter (ID) could be even better (3). However we found that 3 was overly flexible and couldn't adequately carry the high syringe pump pressure from the small ID, giving a slower and less accurate response than 1. Configuration 4 is the same as configuration 2 but with a 45&deg; cut and was worse (likely due to the increased surface area).
+</p>
+<p>
+We tried 'squashing' the natural PEEK tubing at the end with flat pliers (5) to make a less favourable geometry for the retained droplet (i.e. strongly elliptical instead of circular). This actually worked quite well since the PEEK material was able to retained to squashed shape and the smallest accurate dispense volume was reduced from 10 &mu;l to 4 &mu;l with water. However we found that the squashed termination caused significant 'foaming' with media and was therefore not attractive for imaging.
+</p>
+<p>
+We tried small ID PEEK tubing in blue (6) and red (7) guage but the greatly increased pressure resulted in slower dispense speeds and lower accuracy, especially for the red tubing. We also tried natural peek tubing (2) with a short termination in either blue (6) or red (7) tubing but this inceased complexity for no obvious gain.
+</p>
+
+<h3 id="fluidic_resistance">Fluidic resistance</h3>
+<p>
+A useful concept when designing fluidic systems is the idea of the 'fluidic resistance' of the system \( R_H \). In general, for a given a flow rate \( Q \) the pressure drop across the system \( \Delta P \) is directly proportional to the fluidic resistance [<a class="citation" href="https://books.google.com/books/about/Physics_for_Scientists_and_Engineers.html?id=450NzgEACAAJ" title="Physics for Scientists and Engineers: Extended Version, 5th edition; P. A. Tipler and G. Mosca; p413-414, ISBN-10: 0716743892, ISBN-13: 9780716743897, (2003)">Tipler 2003</a>]:
+</p>
+
+\[ \Delta P = Q R_H \tag{a1} \]
+
+<p>
+So for a given flow rate a higher fluidic resistance will give a higher drop in pressure, and a lower fluidic resistance a lower drop in pressure. Usually a system can only deliver (or tolerate) some maximum amount of pressure, and there is often a minimum flow rate that is required, so this puts bounds on how much fluidic resistance is acceptable for a particular application. In the special case of a cylindrical tube under laminar flow we can calculate the fluidic resistance directly with the Hagen-Poiseuille equation [<a class="citation" href="https://books.google.com/books/about/Physics_for_Scientists_and_Engineers.html?id=450NzgEACAAJ" title="Physics for Scientists and Engineers: Extended Version, 5th edition; P. A. Tipler and G. Mosca; p413-414, ISBN-10: 0716743892, ISBN-13: 9780716743897, (2003)">Tipler 2003</a>]:
+
+\[ R_H = \frac{8 \mu L}{\pi r^4} \tag{a2} \]
+
+Where \( \mu \) is the dynamic viscosity of the fluid (~ 0.001 Pas for water at room temp.), \( L \) is the length of the tube and \( r \) is the inner radius of the tube. So the fluidic resistance of a tube is directly proportional to the length of the tube and inversely proportional to the fourth power of the inner radius (i.e. twice the length is twice the resistance and half the radius is 16 times the resistance!).
+</p>
+
+<h3 id="mechanical_design">Mechanical design</h3>
+<p>
+Here we present the full mechanical design for this implementation of a SALDA, with examples of how to <a href="#bending_ss_tubes" target="_self">bend stainless steel tubes</a> to hold the <a href="#delivery_tubes" target="_self">delivery tube</a>, an <a href="#xyz_kinematic_arm" target="_self">XYZ kinematic arm</a> for positioning the delivery tube, an <a href="#okolab_stage_top_incubator" target="_self">Okolab stage top incubator</a> and <a href="#okolab_stage_top_incubator_custom_riser" target="_self">custom riser</a> to accommodate the delivery tube, and a <a href="#syringe_pump_mount" target="_self">syringe pump mount</a> to reduce the length of the delivery tube. Although the <a href="cad" target="_self">CAD presented here</a> is specific to an Okolab stage top incubator and a Leica DMi8 microscope, we expect the design and associated methods are readily modified and adapted to any microscope platform that can accommodate a small diameter tube (~2 mm).
+</p>
+
+<h4 id="bending_ss_tubes">Bending stainless steel tubes</h4>
+<p>
+To keep the mechanical design simple, low cost and adaptable we figured out how to bend small diameter stainless steel tubes to hold the otherwise flexible delivery tubes in place. We found that two small radius 90° bends were useful for our immediate implementation. One 90° bend above the sample to direct the delivery tube into the sample well and a second 90° bend on the clamped end to stop unwanted rotation of the stainless steel tube (shown in <a href="./index.html#fig_mechanics" target="_self">Figure 5</a> of the main text).
+</p>
+<p>
+When attempting a small radius bend in tubing the 'bend factor' \( f \) is a helpful concept, defined as the ratio of the center line radius \( CLR \) to the outer diameter of the tube \( D_{OD} \):
+</p>
+
+\[ f = \frac{CLR}{D_{OD}} \tag{a3} \]
+
+<p>
+A minimum bend factor of 2 is recommended for many materials, with 3 or more being safer to avoid distorting the tube while bending.
+</p>
+<p>
+We tried bending 8" long stainless steel tubes with outer diameters of <a href="figures/mechanics/mcmaster_5560K734_ss_tube_0.065inOD_8inL.pdf" target="_self">~1.7 mm</a>, <a href="figures/mechanics/mcmaster_5560K744_ss_tube_0.072inOD_8inL.pdf" target="_self">~1.8 mm</a>, <a href="figures/mechanics/mcmaster_5560K754_ss_tube_0.083inOD_8inL.pdf" target="_self">~2.1 mm</a> and <a href="figures/mechanics/mcmaster_5560K764_ss_tube_0.095inOD_8inL.pdf" target="_self">~2.4 mm</a> mm around an M6 socket head bolt (~5 mm radius), which gave bend factors in the range of ~2.6 to ~3.5. To do this we used finger strength to bend the tubes on a simple jig made from an aluminium breadboard (Thorlabs MB2020/M) with a table clamp (Thorlabs CL2M) and 3 M6 socket head bolts (<a href="#fig_bending_ss_tubes" target="_self">Figure A2</a>). In practice we found that the 1.8 mm tubing with a bend factor of ~3.3 was well behaved and that bend factors much lower than this could collapse the tube. The inner diameter (~1.4 mm) of the 1.8 mm tube is also large enough to readily thread in the <a href="#delivery_tubes" target="_self">delivery tubes</a>, and stiff enough to achieve repeatable XYZ positioning without being overly large. Larger tubes are easier to thread and stiffer but are harder to accommodate in the otherwise tight opto-mechanical design.
+</p>
+
+<figure id="fig_bending_ss_tubes">
+<img src="figures/bending_ss_tubes/3.jpg" alt="Figure bending ss tubes" id="fig_bending_ss_tubes_img" style="width:100%;">
+<table class="figure_controls">
+	<tr>
+	<td>Step:</td>
+	<td><select id="fig_bending_ss_tubes_choice_sheet" onchange="update_fig_bending_ss_tubes()">
+			<option value="1">1) Setup sample bend</option>  
+			<option value="2">2) Perform sample bend</option>
+			<option value="3" selected="selected">3) Measure location of clamp bend</option>
+			<option value="4">4) Perform clamp bend</option>
+			<option value="5">5) Mark cut for sample bend</option>
+			<option value="6">6) Cut sample bend</option>
+			<option value="7">7) File outside edges of cut</option>
+			<option value="8">8) Get ~3 mm drill bit and tap wrench</option>
+			<option value="9">9) De-burr inside edge of cut</option>
+			<option value="10">10) Clamp stainless steel tube</option>
+			<option value="11">11) Thread delivery tube and tape</option>
+	</select></td>
+	</tr>
+</table>
+<figcaption><strong>Figure A2: Bending stainless steel tubes.</strong> 
+This interactive figure shows the steps taken to bend the small diameter stainless steel tubes that hold the delivery tube for a SALDA. The figure can be toggled between the different steps showing: <strong>1)</strong> How to set up the sample bend. Here it's important to push the clamp firmly flush with the tube before bolting it down. <strong>2)</strong> Perform the sample bend by firmly pressing the tube against the breadboard and pulling the tube around the M6 bolt head with fingers. <strong>3)</strong> Measure the location of the clamp bend. Here we integrated with a stage top incubator that needs about 147 mm of tube 'arm'. <strong>4)</strong> Perform the clamp bend like step <strong>2)</strong>, but pressing down on the sample bend to keep both bends in the same plane. <strong>5)</strong> Mark the cut location for the sample bend to get a ~90° exit for the delivery tube. <strong>6)</strong> Cut the sample bend at the marked location using a Dremel or similar. <strong>7)</strong> File the outside edges of the cut to remove any sharp edges. <strong>8)</strong> Get a ~3 mm drill bit and tap wrench or similar. <strong>9)</strong> De-burr the inside edge of the sample bend cut so the threading is smooth. <strong>10)</strong> Clamp the tube into the chosen mount. <strong>11)</strong> Thread the delivery tube, make any final adjustments to the tube position and tape in place.
+</figcaption>
+</figure>
+<p></p>
+
+<h4 id="xyz_kinematic_arm">XYZ kinematic arm</h4>
+<p>
+Here's an example of a SALDA with an XYZ kinematic arm for positioning the delivery tube above the objective (<a href="#fig_xyz_kinematic_arm" target="_self">Figure A3</a>). This particular arrangement works well with a Leica DMi8 inverted microscope but we expect the same or similar versions to work well with other microscope platforms (<a href="cad" target="_self">CAD here</a>).
+</p>
+
+<figure id="fig_xyz_kinematic_arm">
+<img src="figures/mechanics/salda_v1.0_render_v1.0.png" alt="Figure A3" id="fig_A3_img" style="width:100%;">
+<figcaption>
+<strong>Figure A3: a SALDA with an XYZ kinematic arm.</strong> 
+Here's an example of a SALDA with an XYZ kinematic arm for positioning the delivery tube above the objective. The arm has macroscope (i.e. cm scale) adjustment in XY by moving the base around on the optical table, and macro Z adjustment by with the large 1.5 inch post. Fine adjustment of the XYZ position of the delivery tube can be done with the 3 dovetail translation stages. This particular arrangement works well with a Leica DMi8 inverted microscope but we expect the same or similar versions to work well with other microscope platforms (<a href="cad" target="_self">CAD here</a>).
+</figcaption>
+</figure>
+<p></p>
+
+<h4 id="okolab_stage_top_incubator">Okolab stage top incubator</h4>
+<p>
+Here we chose to integrate a SALDA with an <a href="figures/mechanics/okolab_H301-K-FRAME_user_manual.pdf" target="_self">Okolab H301-K-FRAME</a> stage top incubator that has built in temperature, CO2 and humidity control to provide a stable environment for long time lapse microscopy of living cells and organisms. To allow the SALDA delivery tube to enter the incubator we needed to modify the H301-K-FRAME assembly. Fortunately, the H301-K-FRAME has an intermediate 'riser' part that can easily be removed (<a href="#fig_okolab_stage_top_incubator" target="_self">Figure A4, d)</a>) and replaced with a <a href="#okolab_stage_top_incubator_custom_riser" target="_self">custom riser</a>.
+</p>
+
+<figure id="fig_okolab_stage_top_incubator">
+<img src="figures/mechanics/okolab_H301-K-FRAME_v1.0_render_v1.0_labeled.png" alt="Figure A4" id="fig_A4_img" style="width:100%;">
+<figcaption>
+<strong>Figure A4: Okolab H301-K-FRAME stage top incubator.</strong> Here we show just one version of the Okolab H301-K-FRAME stage top incubator with <strong>a)</strong> the 'Koehler' lid, <strong>b)</strong> a <a href="figures/multiwell_samples/cellvis_P96-1.5H-N_96_well_plate.pdf" target="_self">Cellvis 96 well plate</a>, <strong>c)</strong> the 'MW OIL' insert for use with multiwell plates and dry or immersion objectives, <strong>d)</strong> the 'standard riser' which adds some Z height to the lid and <strong>e)</strong> the base (<a href="cad/okolab" target="_self">CAD here</a>). There are many other versions and options (<a href="figures/mechanics/okolab_H301-K-FRAME_user_manual.pdf" target="_self">see manual</a>).
+</figcaption>
+</figure>
+<p></p>
+
+<h4 id="okolab_stage_top_incubator_custom_riser">Okolab stage top incubator custom riser</h4>
+<p>
+We designed a custom riser for the Okolab H301-K-FRAME stage top incubator (<a href="cad/assemblies" target="_self">CAD here</a>). This new part adds height to the lid and has a cutout to add some flexible seals to allow the SALDA delivery tube to enter the incubator (<a href="#fig_okolab_stage_top_incubator_custom_riser" target="_self">Figure A5</a>). The cutout extends to the length of a standard multiwell plate to allow the delivery tube access to all the wells as the microscope XY stage moves around. We opted to 3D print the riser with a Formlabs Form 4 MSLA printer, using their 'Clear V5' photopolymer resin (takes about 2h). However, this part could also be machined out of aluminium or other plastics. We glued the magnets and square nuts in place using Gorilla clear 5min two part epoxy.
+</p>
+
+<figure id="fig_okolab_stage_top_incubator_custom_riser">
+<img src="figures/mechanics/okolab_H301-K-FRAME_riser_custom_v1.0_render_v1.0_labeled.png" alt="Figure A5" id="fig_A5_img" style="width:100%;">
+<figcaption>
+<strong>Figure A5: Okolab H301-K-FRAME stage top incubator custom riser.</strong> Here's a custom riser for the Okolab H301-K-FRAME stage top incubator with <strong>a)</strong> a custom riser base (3D printed here, but could be machined), <strong>b)</strong> a <a href="figures/mechanics/mcmaster_93675K11_light_duty_vinyl_foam_strip_0.125in_0.25in_130mm.pdf" target="_self">flexible seal</a>, <strong>c)</strong> <a href="figures/mechanics/mcmaster_5862K101_magnet_0.125in_0.125in.pdf" target="_self">magnets</a> to match the 'Koehler' lid and <strong>d)</strong> <a href="figures/mechanics/mcmaster_97258A121_ss_thin_square_nut_M2x0.4.pdf" target="_self">square nut</a> inserts for optionally screwing down the 'Koehler' lid (<a href="cad/assemblies" target="_self">CAD here</a>). Note that for <strong>b)</strong> we also added some ultra-low-friction <a href="figures/mechanics/mcmaster_6305A53_PTFE_tape_0.75in_wide.pdf" target="_self">PTFE tape</a> on top of the flexible seals to allow the holding tube to glide around the incubation chamber during XY motions with minimal deflection.
+</figcaption>
+</figure>
+<p></p>
+
+<h4 id="syringe_pump_mount">Syringe pump mount</h4>
+<p>
+We designed and built a basic syringe pump mount for the KDS Legato 110 syringe pump (<a href="cad/assemblies" target="_self">CAD here</a>). This mount is optional but holds the syringe pump securely in a convenient  location near the sample which reduces the length of the delivery tube and therefore the liquid pressure in the system (<a href="#fig_syringe_pump_mount" target="_self">Figure A6</a>). We expect the same or similar designs to be helpful with other syringe pump models and microscope platforms.
+</p>
+
+<figure id="fig_syringe_pump_mount">
+<img src="figures/mechanics/syringe_pump_mount.jpg" alt="Figure A6" id="fig_A6_img" style="width:100%;">
+<figcaption>
+<strong>Figure A6: syringe pump mount.</strong> Here's an example of a syringe pump mount for a KDS Legato 110 syringe pump (<a href="cad/assemblies" target="_self">CAD here</a>). The mount has XY adjustment by moving the base around on the optical table, Z height and swivel adjustment from the large 1.5 inch post and tilt adjustment from the <a href="figures/mechanics/mcmaster_97258A121_ss_thin_square_nut_M2x0.4.pdf" target="_self">adjustable angle mounting plate</a> that sits under the breadboard (hidden in this photo). Apart from the convenience and space saving aspect of this design, the main technical reason to consider this addition is to minimize the length of the delivery tube and lower the system pressure for a given flow rate.
+</figcaption>
+</figure>
+<p></p>
+
+<h3 id="trueness_and_precision">Trueness and precision</h3>
+<p>
+To benchmark a SALDA we adopted definitions for 'accuracy', <a href="#trueness" target="_self">'trueness'</a> and <a href="#precision" target="_self">'precision'</a>. High trueness is when the average measured value is close to the target value (i.e. a low systematic error). High precision is when the measured values are close to each other (i.e. a low random error). High accuracy is when both the trueness and precision are high.
+</p>
+
+<h4 id="trueness">Trueness</h4>
+<p>
+We equate high trueness to a low systematic error, which we can express mathematically as a low percentage error or low relative bias \( RB \):
+</p>
+
+\[ RB{(\%)} = 100 \left( \frac{\bar{x} - x_T}{x_T} \right) \tag{a4} \]
+
+<p>
+where \( x_T \) is the target value and \( \bar{x} \) is the mean of \( N \) individual measurements \( x_i \):
+</p>
+
+\[ \bar{x} = \frac{1}{N} \sum_{i=0}^N x_i \tag{a5} \]
+
+<h4 id="precision">Precision</h4>
+<p>
+We equate high precision to a low random error, which we can express mathematically as a low coefficient of variation \( CV \):
+</p>
+
+\[ CV{(\%)} = 100 \ \frac{\sigma}{\bar{x}} \tag{a6} \]
+
+<p>
+where \( \sigma \) is the standard deviation of the measurements:
+</p>
+
+\[ \sigma = \sqrt{\frac{\sum_{i=0}^N |x_i - \bar{x}|^2}{N}} \tag{a7} \]
+
+<h3 id="retained_droplet">Retained Droplet</h3>
+<p>
+We found an unwanted 'retained droplet' (RD) would form on the end of the liquid delivery tube through surface tension counteracting the force of gravity pulling the liquid downwards. The size of the RD would determine the smallest liquid dispense volume we could attempt, so a smaller RD would enable smaller dispense volumes and a larger RD would limit a SALDA to larger dispense volumes (<a href="#fig_retained_droplet" target="_self">Figure A7</a>).
+</p>
+
+<figure id="fig_retained_droplet">
+<img src="figures/fluidics/retained_droplet.jpg" alt="Figure A7" id="fig_A7_img" style="width:100%;">
+<figcaption>
+<strong>Figure A7: retained droplet.</strong> Here's an example of a retained droplet from early testing with a small diameter stainless steel tube (a 2 inch long version of the <a href="figures/mechanics/mcmaster_5560K734_ss_tube_0.065inOD_8inL.pdf" target="_self">~1.7 mm holding tube</a>). We found that this configuration would retain a ~50 &mu;l droplet which was way too large for the target dispense range of 10 &mu;l to 100 &mu;l.
+</figcaption>
+</figure>
+<p></p>
+
+<h3 id="gravimetric_test_rig">Gravimetric test rig</h3>
+<p>
+To evaluate the accuracy of a SALDA we needed a way to measure the dispensed volumes and compare them against the requested or target dispense. To do this we adopted a simple 'gravimetric' approach where we used an analytical balance (<a href="https://github.com/amsikking/ohaus_EX225DAD">Ohaus EX225DAD</a>) to measure the mass of a cup before and after a dispense operation and used the change in mass to estimate the dispensed volume (<a href="#fig_gravimetric_test_rig" target="_self">Figure A8</a>).
+</p>
+
+<figure id="fig_gravimetric_test_rig">
+<img src="figures/volume_testing/gravimetric_test_rig_labeled.jpg" alt="Figure A8" id="fig_A8_img" style="width:100%;">
+<figcaption>
+<strong>Figure A8: gravimetric test rig.</strong> Here's the gravimetric test rig we used to iteratively request dispense operations and measure the response using: <strong>a)</strong> a programmatically controlled <a href="https://github.com/amsikking/kds_legato110">KDS Legato 110</a> syringe pump where we can adjust flow rate and target volume, <strong>b)</strong> a static arm to hold the delivery tube inside the analytical balance, <strong>c)</strong> an <a href="https://github.com/amsikking/ohaus_EX225DAD">Ohaus EX225DAD</a> analytical balance with USB connection for recording the change in mass and <strong>d)</strong> a laptop to run the <a href="figures/volume_testing/run_volume_test.py" target="_self">test program</a>.
+</figcaption>
+</figure>
+<p></p>
+
+<p>
+We wrote a flexible <a href="figures/volume_testing/run_volume_test.py" target="_self">test program</a> to configure the syringe pump (flow rate, direction and target volume) and measure the net weight of the dispense from the analytical balance. In practice we ran either fixed volumes (e.g. 10 &mu;l) or random volumes in a given interval (e.g. 10 &mu;l to 100 &mu;l) for up to 100 iterations. A 5 second delay was included between the dispense and mass measurement to allow the fluidics and analytical balance time to stabilize. The idea of multiple 'shots on target' was explored at one point but ultimately not needed and so all the data presented here is single shot. Here's an extract of the test program showing the configuration and main loop:
+</p>
+
+<pre><code class="language-python">
+# Configure syringe:
+syringe_volume_ul = 2500
+dispensed_volume_ul = 0
+
+# Configure syringe pump:
+flow_rate_ulps = 110 # max ~110 ul/sec for 2.5ml glass syringe (6.62764 ml/min)
+sy_pump.set_flow_rate('withdraw', 'max', None)
+sy_pump.set_flow_rate('infuse', flow_rate_ulps, 'ul/sec')
+sy_pump.set_run_direction('infuse')
+
+# Configure:
+target_volume_ul = 10   # 10-100 typical
+random_volumes = False
+random_volume_range = (10, 100)
+iterations = 100 # how many iterations?
+shots_on_target = 1 # how many shots are needed for high trueness? prefer 1
+
+# Get unique filename and start weight:
+dt = datetime.strftime(datetime.now(),'%Y-%m-%d_%H-%M-%S')
+filename = dt + '_volume_vs_weight.csv'
+previous_weight_mg = float(balance.get_immediate_weight()[0])
+for i in range(iterations):
+    print('\niteration = %i (dispensed_volume_ul=%s)'%(i, dispensed_volume_ul))
+    if random_volumes: # change target volume if random:
+        target_volume_ul = np.random.randint(low=random_volume_range[0],
+                                             high=random_volume_range[1])
+    # update total dispsensed volume and exit if syringe is empty:
+    dispensed_volume_ul += target_volume_ul * shots_on_target
+    if dispensed_volume_ul >= syringe_volume_ul:
+        break
+    sy_pump.set_target_volume(target_volume_ul, 'ul')
+    # get data:
+    for shot in range(shots_on_target):
+        print('\nshot = %i'%shot)
+        sy_pump.set_run_direction('infuse')# forces volume update? device error?
+        sy_pump.run()
+        time.sleep(5) # wait for fluidics and balance to stablize
+        immediate_weight_mg = float(balance.get_immediate_weight()[0])
+        net_weight_mg = round(immediate_weight_mg - previous_weight_mg, 2)
+        previous_weight_mg = immediate_weight_mg
+        with open(filename, 'a', newline='') as file:
+            writer = csv.writer(file)
+            if i == 0 and shot == 0:
+                writer.writerow([ # write headers
+                    'shot','flow_rate_ulps','target_volume_ul','net_weight_mg'])
+            writer.writerow([ # write data:
+                shot, flow_rate_ulps, target_volume_ul, net_weight_mg])
+</code></pre>
+
+<h3 id="adherent_cells">Adherent cells</h3>
+<p>
+U2-OS cells were maintained in DMEM (Thermo Fisher #31053028) containing 10% FBS (Gibco #26140-079), 1 mM sodium pyruvate, and 2 mM GlutaMAX in a 37°C incubator with 5% CO2. Cells were passaged every 2-3 days by trypsinization with TrypLE express dissociation reagent. Cells were routinely tested for mycoplasma contamination and were discarded after 20 passages. 
+</p>
+<p>
+For imaging experiments, 8 well chambered coverglass (CellVis) were coated with bovine fibronectin (Sigma) diluted 1:100 in PBS for 1-5 hours at 37°C. Dishes were washed three times in PBS immediately before cell addition. U2-OS cells were seeded into chambered coverglass at 25,000 cells per well and allowed to adhere at room temperature for 30 minutes before transferring to the incubator. Cells were plated approximately 24 hours before imaging.
+</p>
+<p>
+One to two hours prior to imaging, cells were media changed in complete culture media supplemented with 25 mM HEPES to reduce pH drift, along with 4 μM CalBryte 520 AM (AAT Bioquest) and 0.04% Pluronic® F-127. To remove excess dye immediately prior to imaging, media was exchanged to complete DMEM with 25 mM HEPES. Thapsigargin (Sigma ready made) was made up as a 1000x-10000x DMSO stock and diluted to a 3x working solution in complete media before loading into the glass syringe for addition.
+</p>
+
+<h3 id="setup">Setup</h3>
+<p>
+In practice we found a SALDA straightforward to set up for an imaging experiment and well behaved. However there are some practical details that are worth considering:
+</p>
+<ol>
+<li>
+To load the syringe we found it most convenient to remove it from the syringe pump, disconnect the delivery tube with the Luer lock and manually load the syringe directly from the source (e.g. a conical tube). We would then reconnect the Luer lock, re-attach the syringe to the syringe pump and manually drive the syringe pump screw (using the arrow keys on the touch screen) to eject liquid into a waste container (i.e. to remove air and have it ready for a dispense).
+</li>
+<li>
+During the setup we think it's best to place the SALDA holding tube onto the magnetic mount with a dry end (i.e. no retained droplet) to avoid the risk of accidentally dropping liquid into the sample (i.e. by shaking loose droplets from the end of the delivery tube).
+</li>
+<li>
+Due to 2. it's helpful to have a spare (i.e. trash) well in the sample or an additional dish to the side that can be used to dispense a few times with the SALDA and get it 'primed' for the experiment.
+</li>
+<li>
+The XYZ kinematic arm is used to position the SALDA holding tube over the objective (XY) and at the right height (Z) so that the holding tube sits comfortably between the flexible seals on the incubation chamber (or otherwise in a good location for other setups). Final Z adjustments can be made by sliding the delivery tube towards or away from the sample before securing it with tape (e.g. <a href="#fig_bending_ss_tubes" target="_self">Figure A2, 11)</a>).
+</li>
+<li>
+To minimize artefacts from using a SALDA it's best to adjust the XY position of the holding tube away from the immediate field of view of the microscope, but not so far as to risk dispensing out of the well or into a neighbouring well. So extra care is needed when imaging close to the edge of a well or if running a tiling routine etc.
+</li>
+<li>
+Compared to manual pipetting, switching dispense liquids is slower and requires partial disassembly of the setup and flushing and cleaning the fluidics. This should be taken into account when planning experiments.
+</li>
+
+</ol>
+
+</section>
+<footer>
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="./images/cc_by_4p0.png"></a>
+
+  <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a></small></p>
+</footer>
+</div>
+ <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!doctype html>
+<!-- 
+This publication template is based on the one created by Andrew G York:
+https://github.com/AndrewGYork/publication_template . Thanks Andrew!
+
+Based on this theme: https://github.com/broccolini/dinky , which mentioned that 
+attribution is appreciated. Thanks, broccolini!
+-->
+<html lang="en">
+  <head>
+    <base target="_blank">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="citation_title" content="A simple automatic liquid dispense arrangement (SALDA) for timelapse microscopy">
+    <meta name="citation_author" content="Alfred Millett-Sikking">
+	
+	<!-- TODO: upate the date etc -->
+	
+    <meta name="citation_publication_date" content="2025/12/11">
+    <meta name="citation_journal_title" content="Github.io">
+    <meta name="citation_pdf_url" content=
+	"https://amsikking.github.io/SALDA_for_timelapse_microscopy/SALDA_for_timelapse_microscopy.pdf">
+    <title>SALDA_for_timelapse_microscopy</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">SALDA for timelapse microscopy</h1>
+        <ul>
+          <li class="download"><a class="buttons" 
+		  href="https://github.com/amsikking/SALDA_for_timelapse_microscopy/zipball/master">Download ZIP</a></li>
+          <li><a class="buttons github" 
+		  href="https://github.com/amsikking/SALDA_for_timelapse_microscopy">View On GitHub</a></li>
+          <li><a class="buttons pdf" 
+		  href="./SALDA_for_timelapse_microscopy.pdf">Download PDF</a></li>
+        </ul>
+        <p class="header">This project is maintained by 
+		<a class="header name" href="https://amsikking.github.io/">amsikking</a> from 
+		
+		<!-- TODO: update group website -->
+		
+		<!-- <a class="header name" href="https://amsikking.github.io/">Calico Automation</a>, and was funded by  -->
+		Calico Automation, and was funded by 
+		<a class="header name" href="https://www.calicolabs.com/">Calico Life Sciences LLC</a></p>
+      </header>
+<!-- 
+##############################################################
+The real text begins here.
+##############################################################
+ -->
+<section>
+<h1>Technical note</h1>
+<h3 class="onlyprint">
+Note that this is a limited PDF or print version; animated and interactive figures are disabled. For the full version of this article, please visit one of the following links: 
+<a href="https://amsikking.github.io/SALDA_for_timelapse_microscopy">
+https://amsikking.github.io/SALDA_for_timelapse_microscopy</a>
+</h3>
+<noscript>
+<h3>Your browser doesn't seem to support Javascript. This document uses Javascript for interactive figures, math typesetting, and to automatically generate the reference list. Either activate Javascript, or use the "Download PDF" link above if you want properly typeset math and a reference list.</h3>
+</noscript>
+<h2>A simple automatic liquid dispense arrangement (SALDA) for timelapse microscopy</h2>
+<p class="author_list">Alfred Millett-Sikking<sup>*</sup>, Kendra Nyberg, Julia Lazzari-Dean, Elliot Mount and Robert Keyser</p>
+<p class="author_affiliations">Calico Life Sciences LLC, South San Francisco, CA 94080, USA</p>
+<p class="contact_email"><sup>*</sup>
+Institutional email:
+<a href="mailto:amsikking+SALDA@calicolabs.com" target="_self">
+amsikking+SALDA@calicolabs.com</a>
+; Permanent email: 
+<a href="mailto:amsikking+SALDA@gmail.com" target="_self">
+amsikking+SALDA@gmail.com</a></p>
+
+<h3>Abstract</h3>
+<p class="abstract">
+A recurring challenge in timelapse microscopy is adding a liquid perturbation to a sample during imaging and observing the response (e.g. adding a drug). This is typically done by a person hovering over the microscope with a pipette and trying to gently add liquid in a precise location. This method is hard to execute and time accurately, upsets environmental control (e.g. temperature and CO2) and often results in vibrations that disturb or destroy the imaging. Here we present a simple automatic liquid dispense arrangement (SALDA) for timelapse microscopy that is readily deployed and cost effective. We use a programmatically controlled syringe pump with a refined fluidic and mechanical arrangement to dispense liquid directly into multiwell samples that are being imaged by a microscope. The arrangement enables accurate and repeatable timing, eliminates environmental disturbance and vibrations from the user, and facilitates perturbing and imaging of different wells. The fluidic system is readily cleaned or replaced and can dispense volumes as low as 10&micro;l with high trueness (RB = 0.32%) and precision (CV = 1.63%). Here we show the arrangement with a particular stage top incubator and microscope platform, but the setup is easily modified and applied to any system that can accommodate a small diameter tube (~2 mm).
+</p>
+
+<figure id="visual_abstract">
+<video controls autoplay loop muted style="max-height:85%; max-width:100%;" poster="figures/visual_abstract/visual_abstract.png">
+<source src="figures/visual_abstract/visual_abstract.mp4" type="video/mp4">
+Your browser doesn't support HTML5 MP4 video.
+</video>
+<figcaption>
+<strong>Visual abstract: Live cell timelapse microscopy of a multiwell sample with a simple automatic liquid dispense arrangement (SALDA) and a fluorescence response.</strong>
+</figcaption>
+</figure>
+
+<h4>Intended audience</h4>
+<p class="abstract">R&D and automation engineers, microscope users, builders and developers.</p>
+
+<h4>Peer review status</h4>
+<p class="abstract">First published: <a href="https://doi.org/">(Month)X (day)XX , (year)XXXX</a> (This article is not yet peer-reviewed)</p>
+<p class="abstract">Cite as: <a href="https://doi:xx.xxxx/zenodo.xxxxxxx">doi:xx.xxxx/zenodo.xxxxxxx</a></p>
+
+<h3 id="intro">Introduction</h3>
+<p>
+Timelapse microscopy is a powerful technique in biology to study dynamic processes ranging from cell division
+[<a class="citation" href="https://doi.org/10.1016/j.ymeth.2005.07.007" title="Imaging the division process in living tissue culture cells; A. Khodjakov and C. L. Rieder; Methods, vol 38(1), p2–16, (2006)">Khodjakov 2006</a>]
+and migration 
+[<a class="citation" href="https://doi.org/10.1083/jcb.144.6.1235" title="Rho GTPases control polarity, protrusion, and adhesion during cell movement; C. D. Nobles and A. J. Hall; J Cell Biol, vol 144(6), p1235–1239, (1999)">Nobles 1999</a>]
+to embryonic development
+[<a class="citation" href="https://doi.org/10.1242/dev.022426" title="Selective plane illumination microscopy techniques in developmental biology; J. Huisken and D. Y. R. Stainier; Development, vol 136(12), p1963–1975, (2009)">Huisken 2009</a>]
+and can also be applied to high-content screening
+[<a class="citation" href="https://doi.org/10.1038/nmeth876" title="High-throughput RNAi screening by time-lapse imaging of live human cells; Neumann, B., et al.; Nature Methods, vol 3(5), p385–390, (2006)">Neumann 2006</a>]. 
+The importance of this field has lead to significant developments in microscope design to enable faster
+[<a class="citation" href="https://doi.org/10.5281/zenodo.1146083" 
+title="Remote refocus enables class-leading spatiotemporal resolution in 4D optical microscopy; 
+A. Millett-Sikking, N.H. Thayer, A. Bohnert and A.G. York; (2018)">Millett-Sikking 2018</a>], 
+gentler 
+[<a class="citation" href="https://doi.org/10.5281/zenodo.3244420" 
+title="High NA single-objective light-sheet; 
+A. Millett-Sikking, K.M. Dean, R. Fiolka, A. Fardad, L. Whitehead and A.G. York; (2019)">Millett-Sikking 2019</a>,
+<a class="citation" href="https://doi.org/10.7554/eLife.57681" 
+title="A versatile oblique plane microscope for large-scale and high-resolution imaging of subcellular dynamics; 
+E. Sapoznik, B. Chang, J. Huh, R.J. Ju, E.V. Azarova, T. Pohlkamp, E.S. Welf, D. Broadbent, A.F. Carisey, 
+S.J. Stehbens, K. Lee, A. Marín, A.B. Hanker, J.C. Schmidt, C.L. Arteaga, B. Yang, Y. Kobayashi, P.R. Tata, 
+R. Kruithoff, K. Doubrovinski, D.P. Shepherd, A. Millett-Sikking, A.G. York, K.M. Dean and R.P. Fiolka; 
+(2020)">E. Sapoznik 2020</a>]
+and more versatile
+[<a class="citation" href="https://doi.org/10.5281/zenodo.7425649" 
+title="Any immersion remote refocus (AIRR) microscopy; 
+A. Millett-Sikking; (2022)">Millett-Sikking 2022</a>,
+<a class="citation" href="https://doi.org/10.1101/2025.10.04.680473" title="Multi-immersion Oblique Plane Microscope (miOPM): A reconfigurable platform for high-resolution Light-Sheet Fluorescence Microscopy; B. Chen, A. Millett-Sikking, S. Gałecki, S. Daetwyler, J. Jiou, J. Monistrol, Q. Shen, F. Zhou, H. Lin, E. Jenkins, M. C. Stein, M. Marlar-Pavey, G. Sturm, A. L. Li, Q. Tang, B. Feng, U. Diaz, Y. Chen, A. Shalizi, A. Gillich, J. R. Friedman, R. Tomer, B. Chang, W. F. Marshall, S. Shahmoradian, K. M. Dean and R. Fiolka; bioRxiv, ID 2025.10.04.680473, (2025)">Chen 2025</a>]
+3D imaging modes that are  compatible with typical live-cell sample formats like multiwell plates.
+</p>
+<p>
+<a href="./appendix.html#multiwell_samples">Multiwell samples</a> require an inverted microscope and XY stage but are otherwise convenient for timelapse microscopy due to the all-in-one preparation, stable microenvironment and ease of studying different conditions. In principle, the open top aspect of each well in a multiwell sample also allows for liquid additions or perturbations during an imaging experiment (e.g. observing the response to a reagent or drug). In practice, however, many timelapse experiments require environmental control for temperature, CO2 and humidity which impedes access to the sample. Moreover, most microscopes require vibration isolation to hold focus and XY position, and are easily disturbed by mechanical motion near the sample.
+</p>
+
+<p>
+A common approach to implement a liquid perturbation to a sample while imaging is to do it manually. This involves running the image acquisition and then attempting to add a precise liquid volume to a particular well at a particular time with a hand held pipette. This method is typically limited to a single well, upsets environmental control, is hard to execute and time accurately,  and often results in vibrations that disturb or destroy the imaging.
+</p>
+
+<p>
+Here we present a simple automatic liquid dispense <a href="#arrangement" target="_self">arrangement</a> (SALDA) for timelapse microscopy that is readily deployed and cost effective. We use a programmatically controlled <a href="#syringe_pump" target="_self">syringe pump</a> with a refined arrangement of <a href="#fluidics" target="_self">fluidics</a> and <a href="#mechanics" target="_self">mechanics</a> to dispense liquid directly into multiwell samples during imaging. The arrangement enables accurate dispensing (<a href="#volume_testing" target="_self">see volume testing</a>) with repeatable timing, eliminates environmental disturbance and vibrations from the user (<a href="#image_testing" target="_self">see image testing</a>), and facilitates perturbing and imaging of different wells (<a href="#fig_multiwell_dispense" target="_self">Figure 1</a>).
+</p>
+
+<figure id="fig_multiwell_dispense">
+<video controls autoplay loop muted style="max-height:85%; max-width:100%;" poster="figures/multiwell_dispense/multiwell_dispense.png">
+<source src="figures/multiwell_dispense/multiwell_dispense_3x.mp4" type="video/mp4" id="fig_multiwell_dispense_img">
+Your browser doesn't support HTML5 MP4 video.
+</video>
+<table class="figure_controls">
+	<tr>
+	<td>Video:</td>
+	<td><select id="fig_multiwell_dispense_choice_sheet" onchange="update_fig_multiwell_dispense()">
+			<option value="1" selected="selected">a) 3x playback</option>
+			<option value="2">b) 1x playback</option>
+	</select></td>
+	</tr>
+</table>
+<figcaption>
+<strong>Figure 1: a SALDA in action.</strong>
+This interactive figure shows a SALDA accessing different wells of a 96 well plate with blue epi excitation light. The figure can be toggled between <strong>a)</strong> 3x playback and <strong>b)</strong> 1x playback.
+</figcaption>
+</figure>
+
+<h3 id="arrangement">Arrangement</h3>
+<p>
+A SALDA is made from 3 primary subsystems; a <a href="#syringe_pump" target="_self">syringe pump</a>, <a href="#fluidics" target="_self">fluidics</a> and <a href="#mechanics" target="_self">mechanics</a>. Together these subsystems enable computer controlled delivery of accurate liquid volumes directly to the sample during imaging. Here we show an exact configuration for a Leica DMi8 inverted microscope with an Okolab stage top incubator (<a href="#fig_arrangement" target="_self">Figure 2</a>). However, the arrangement and associated methods are readily modified and adapted to any microscope platform that can accommodate a small diameter tube (~2 mm).
+</p>
+
+<figure id="fig_arrangement">
+<img src="figures/arrangement/arrangement_labeled.jpg" alt="Figure arrangement" id="fig_arrangement_img" style="width:100%;">
+<figcaption>
+<strong>Figure 2: a SALDA.</strong> Here we show a SALDA with: 
+<strong>a)</strong> a <a href="#syringe_pump" target="_self">syringe pump</a>, <strong>b)</strong> <a href="#fluidics" target="_self">fluidics</a>, <strong>c)</strong> <a href="#mechanics" target="_self">mechanics</a>, <strong>d)</strong> an <a href="./appendix.html#okolab_stage_top_incubator">Okolab stage top incubator</a> and <strong>e)</strong> a Leica DMi8 inverted microscope platform with an automated XY stage.
+</figcaption>
+</figure>
+<p></p>
+
+<h4 id="syringe_pump">Syringe pump</h4>
+
+<p>
+We used a <a href="https://github.com/amsikking/kds_legato110">KDS Legato 110</a> syringe pump with a convenient touchscreen interface. The pump has programmatic control via <a href="https://github.com/amsikking/kds_legato110/blob/main/kds_legato110.py">USB port</a> and a <a href="https://github.com/amsikking/kds_legato110/blob/main/kds_legato110_external_trigger_example.py">TTL interface</a>, both of which can be used for integration with commercial or custom microscope platforms. The pump can accommodate a wide range of syringe sizes from 0.5 &micro;l to 60 ml and is accurate to ± 0.5 % (<a href="https://github.com/amsikking/kds_legato110/blob/main/KDS_Legato_110_Datasheet_2017.pdf">see datasheet</a>). Selecting the syringe size and type from the options list determines the max and min flow rates that are available for that model (i.e. smaller syringes run at lower flow rates, larger syringes at higher flow rates). Setting the flow rate and target volume then determines how long the infuse or withdraw operation will take (<a href="#fig_syringe_pump" target="_self">Figure 3</a>).
+</p>
+<p>
+Control over dispense timing and speed is one of the advantages of a SALDA. A simple <a href="https://github.com/amsikking/kds_legato110/blob/main/kds_legato110_gui.py">GUI</a> is provided to show the configuration state of the pump and run the dispense program for non-integrated control. We expect any syringe pump with similar specifications to perform equally well for this task.
+</p>
+
+<figure id="fig_syringe_pump">
+<img src="figures/syringe_pump/syringe_pump.jpg" alt="Figure syringe pump" id="fig_syringe_pump_img" style="width:100%;">
+<figcaption>
+<strong>Figure 3: an example syringe pump for a SALDA.</strong> 
+A photo of the <a href="https://github.com/amsikking/kds_legato110">KDS Legato 110</a> syringe pump we used for this implementation of a SALDA with the typical configuration shown on the touchscreen interface (110 &mu;l/s flow rate, infuse with 2.5 ml glass syringe, 50% force, 100&mu;l target volume, takes about 1 s). The arrow buttons enable fast movement of the screw to position the 'pusher block' in the right place to add the syringe. The clamps on the static 'syringe holder' are important for keeping the syringe in place (especially the vertical 'barrel clamp'). The clamp on the pusher block is optional for infusing (mandatory for withdrawing). See the <a href="https://github.com/amsikking/kds_legato110/blob/main/KDS_Legato_100_Series_Manual_5617-006REV2.0.pdf">full manual</a> for more details.
+</figcaption>
+</figure>
+<p></p>
+
+<h4 id="fluidics">Fluidics</h4>
+<p>
+To constrain the fluidic design we considered popular <a href="./appendix.html#multiwell_samples">multiwell sample</a> formats with well volumes in the ~100 &mu;l to ~900 &mu;l range. In practice, labware ranging from 8 well chambered slides <a href="figures/multiwell_samples/cellvis_C8SB-1.5H_8_well_chambered.pdf" target="_self">(e.g. 889 &mu;l well)</a> to 96 well plates <a href="figures/multiwell_samples/cellvis_P96-1.5H-N_96_well_plate.pdf" target="_self">(e.g. 361 &mu;l well)</a> can offer a good tradeoff between number of test conditions and well volume, with enough volume remaining in each well for liquid perturbations. With this in mind, and the fact that some reagents and drugs are expensive, we targeted a fluidic system that can deliver volumes from 10 &mu;l to 100 &mu;l for 8 to 96 samples, which equates to syringe volumes in the ~1ml to ~10ml range.
+</p>
+<p>In principle, a SALDA can run small syringes (e.g. 1 ml) or large syringes (e.g. 10 ml). Larger syringes can dispense larger volumes more times and at higher flow rates than smaller syringes, but they are more costly, less accurate and higher flow rates can disturb the sample. Smaller syringes are more accurate for attempting the more challenging small volume dispenses (e.g. 10 &mu;l), and are sufficient for smaller sample formats (i.e. 8 well chambered slides). For the purposes of testing a SALDA we settled on using a <a href="figures/fluidics/hamilton_81420_glass_syringe_2.5ml.pdf" target="_self">2.5 ml glass syringe</a> with the common 'Luer Lock' termination (<a href="#fig_fluidics" target="_self">Figure 4</a>). This syringe model series is also available in <a href="figures/fluidics/hamilton_81320_glass_syringe_1ml.pdf" target="_self">1 ml</a>, <a href="figures/fluidics/hamilton_81520_glass_syringe_5ml.pdf" target="_self">5 ml</a> and <a href="figures/fluidics/hamilton_81620_glass_syringe_10ml.pdf" target="_self">10 ml</a> versions that were not tested here, but we suspect they will also perform well. We tried plastic syringes that are cheaper and less prone to breakage, but their higher compliance dampens their response to the syringe pump and gives a comparatively slow and unpredictable response.
+</p>
+<p>
+A SALDA adopts a minimal approach to delivering liquid to the sample by using a small diameter tube to simply drop liquid directly into the open well of a multiwell sample (i.e. gravity dispense). The delivery tube is attached to the syringe on one end with special <a href="./appendix.html#fluidic_connectors">fluidic connectors</a> and then positioned above the sample at the other end. Although simple in concept, the practical implementation of this method is challenging for small volume dispenses (e.g. 10 &mu;l) where the surface tension of the liquid will typically result in a <a href="./appendix.html#retained_droplet">retained droplet</a> on the end of the tube. In practice we found that small outer diameter (&lt; 1 mm) <a href="./appendix.html#deliver_tubes_preferred">PTFE or PEEK tubing</a> performed well (<a href="#volume_testing" target="_self">see volume testing</a>). The small inner diameter of this tubing (~300 &mu;m) results in high <a href="./appendix.html#fluidic_resistance">fluidic resistance</a>, so we kept the tube length under ~1m to reduce system pressure. Overall this fluidic design is simple, cost effective and easy to clean or replace parts as needed (<a href="#fig_fluidics" target="_self">Figure 4</a>).
+</p>
+
+<figure id="fig_fluidics">
+<img src="figures/fluidics/fluidics.jpg" alt="Figure fluidics" id="fig_fluidics_img" style="width:100%;">
+<figcaption>
+<strong>Figure 4: fluidics for a SALDA.</strong> 
+<strong>a)</strong> A <a href="figures/fluidics/hamilton_81420_glass_syringe_2.5ml.pdf" target="_self">2.5 ml glass syringe</a> that is rigid and gives a reliable and predictable response (also available in <a href="figures/fluidics/hamilton_81320_glass_syringe_1ml.pdf" target="_self">1 ml</a>, <a href="figures/fluidics/hamilton_81520_glass_syringe_5ml.pdf" target="_self">5 ml</a> and <a href="figures/fluidics/hamilton_81620_glass_syringe_10ml.pdf" target="_self">10 ml</a> versions), <strong>b)</strong> reliable <a href="./appendix.html#fluidic_connectors">fluidic connectors</a> that are readily assembled and <strong>c)</strong> a <a href="./appendix.html#deliver_tubes_preferred">PTFE delivery</a> tube that's about 80cm long (&lt; 1 m is preferable to reduce system pressure).
+</figcaption>
+</figure>
+<p></p>
+
+<h4 id="mechanics">Mechanics</h4>
+<p>
+For the SALDA <a href="./appendix.html#mechanical_design">mechanical design</a> we opted to use stiff small diameter stainless steel tubing to hold the flexible liquid delivery tube (e.g. PTFE) above the sample. We figured out how to <a href="./appendix.html#bending_ss_tubes">bend the stainless steel tube</a> into a convenient shape, clamp it onto a <a href="figures/mechanics/thorlabs_KB50_M_kinematic_base.pdf" target="_self">quick-release magnetic mount</a> and position it precisely above the sample with an <a href="./appendix.html#xyz_kinematic_arm">XYZ kinematic arm</a>. This arrangement allows the XYZ position of the delivery tube to be adjusted so that the end of the tube is outside the immediate field of view of the microscope but still above the well for the dispense operation (<a href="#fig_mechanics" target="_self">Figure 5</a>). This takes advantage of the existing microscope XY stage, so that as different wells are repositioned for imaging, they are also under the delivery tube for liquid perturbations.
+</p>
+
+<p>
+Here we show a SALDA mechanically integrated with an <a href="./appendix.html#okolab_stage_top_incubator">Okolab stage top incubator</a> and Leica DMi8 microscope, but the arrangement can readily be adapted to different platforms. We also present a basic <a href="./appendix.html#syringe_pump_mount">syringe pump mount</a> to hold the pump in a convenient location and to reduce the length of the delivery tube and therefore minimize the liquid pressure in the system.
+</p>
+
+<figure id="fig_mechanics">
+<img src="figures/mechanics/SALDA_v1.0_render_v1.0_cropped_labeled.png" alt="Figure mechanics" id="fig_mechanics_img" style="width:100%;">
+<figcaption>
+<strong>Figure 5: a SALDA mechanics with a stage top incubator.</strong> 
+<strong>a)</strong> a <a href="./appendix.html#deliver_tubes_preferred">delivery tube</a> for dispensing liquid to the sample well, <strong>b)</strong> a stiff <a href="figures/mechanics/mcmaster_5560K744_ss_tube_0.072inOD_8inL.pdf" target="_self">stainless steel holding tube</a> that is <a href="./appendix.html#bending_ss_tubes">bent to shape</a> to house the otherwise flexible delivery tube, <strong>c)</strong> some <a href="figures/mechanics/mcmaster_4711N145_snugfFit_loop_clamp.pdf" target="_self">holding tube clamps</a> to secure the holding tube in place (including a vertical clamp to stop rotation), <strong>d)</strong> a <a href="figures/mechanics/thorlabs_KB50_M_kinematic_base.pdf" target="_self">quick-release magnetic mount</a> so the delivery tube can conveniently be added or removed, <strong>e)</strong> an <a href="./appendix.html#xyz_kinematic_arm">XYZ kinematic arm</a> to adjustment the delivery tube so that it sits above the sample well being imaged by the microscope, <strong>f)</strong> an <a href="./appendix.html#okolab_stage_top_incubator">Okolab stage top incubator</a>, <strong>g)</strong> an <a href="./appendix.html#okolab_stage_top_incubator_custom_riser">Okolab custom riser</a> to allow the addition of flexible seals to the Okolab stage top incubator, <strong>h)</strong> some <a href="figures/mechanics/mcmaster_93675K11_light_duty_vinyl_foam_strip_0.125in_0.25in_130mm.pdf" target="_self">flexible seals</a> to allow the holding tube to enter the stage top incubator while maintaining temperature, CO2 and humidity. Note that for <strong>h)</strong> we also added some ultra-low-friction <a href="figures/mechanics/mcmaster_6305A53_PTFE_tape_0.75in_wide.pdf" target="_self">PTFE tape</a> on top of the flexible seals to allow the holding tube to glide around the incubation chamber during XY motions with minimal deflection (<a href="#fig_multiwell_dispense" target="_self">Figure 1</a>).
+</figcaption>
+</figure>
+<p></p>
+
+<h3 id="testing_and_results">Testing and results</h3>
+<p>
+To determine a good fluidic setup for a SALDA we tested different <a href="./appendix.html#delivery_tubes">delivery tubes</a> (dimensions, materials and terminations) at different flow rates with both water and cell culture media (<a href="figures/volume_testing/thermofisher_31053_DMEM.pdf" target="_self">DMEM</a> with 10% <a href="figures/volume_testing/thermofisher_26140079_FBS.pdf" target="_self">FBS</a>). The aim was to deliver the smallest volumes possible (i.e. 10 &mu;l or less), as fast as possible, and without disturbing the sample. We aimed for small volumes because we found that when the small volume accuracy was good in terms of <a href="./appendix.html#trueness_and_precision">trueness and precision</a>, the large volume accuracy was better. We aimed for fast dispense times to improve the temporal resolution of timelapse experiments, and we aimed to not disturb the sample as a primary figure of merit for the arrangement.
+</p>
+
+<h4 id="volume_testing">Volume testing</h4>
+
+<p>
+For small volume dispenses we found that the lower bound is mostly determined by the size of the <a href="./appendix.html#retained_droplet">retained droplet</a> (RD) that is formed on the end of the delivery tube (i.e. by surface tension). Attempting to dispense volumes that are close to the size of the RD at low flow rates can easily give a 'zero or double' dispense result, and so minimizing the RD and then dispensing volumes that are significantly larger or at higher flow rates is important for accuracy. At first glance the RD appears unstable, but in practice we found the size was very repeatable after running a few dispense cycles with a given configuration and that only abrupt mechanical shock could shake it loose.
+</p>
+<p>
+To reduce the RD we found that small outer diameter tubes with a large inner diameter were preferable, likely from the reduced surface area and higher flow rates enabled by this configuration. We also found that <a href="./appendix.html#deliver_tubes_preferred">PEEK and PTFE tubing</a> (both hydrophobic) gave much smaller RD with water and media than stainless steel (hydrophilic). The higher water contact angle of PTFE (100&deg; to 120&deg;) gave a smaller RD than PEEK (80&deg; to 90&deg;), especially with 'sticky' media. We tried different termination options like 'clean 45&deg; cut', 'squashed 90&deg; cut', etc with mixed results. For most applications we think the slightly better performing and much lower cost of PTFE tubing with a simple 'clean 90&deg; cut' is preferable.
+</p>
+<p>
+We tried low and high flow rates and found that we could dispense in either a 'dripping' or 'jetting' regime. The dripping regime was slower and less accurate, especially for small volumes where a zero or double dispense is possible. The jetting regime is faster and more accurate, but has a higher risk of disturbing the sample (especially when dispensing large volumes). Here we settled on running most of the tests in the jetting regime at the max flow rate of 110 &mu;l/s for the 2.5 ml syringe. We noticed that we could run water as low as 70 &mu;l/s and still be jetting, but for media the lower bound was more like 100 &mu;l/s. We suspect that the minimum flow rate needed for jetting will depend on the liquid type, viscosity and temperature, as well as the fluidic arrangement (and may need fine tuning on a per setup basis). In practice these flow rates mean that most dispense operations in the 10 &mu;l to 100 &mu;l range will happen in less than 1 second (<a href="#fig_dispense" target="_self">Figure 6</a>).
+</p>
+
+<figure id="fig_dispense">
+<video controls autoplay loop muted style="max-height:85%; max-width:100%;" poster="figures/dispense/dispense.png">
+<source src="figures/dispense/dispense.mp4" type="video/mp4" id="fig_dispense_img" >
+Your browser doesn't support HTML5 MP4 video.
+</video>
+<figcaption>
+<strong>Figure 6: a SALDA dispense.</strong> Here we show a 100 &mu;l dispense into a <a href="figures/multiwell_samples/cellvis_C8-1.5H-N_8_well_chambered_short.pdf" target="_self">
+  Cellvis 8 well chambered slide</a> in the 'jetting regime' with a flow rate of 110 &mu;l/s.
+</figcaption>
+</figure>
+<p></p>
+
+<p>
+To evaluate the accuracy of a SALDA we built a <a href="./appendix.html#gravimetric_test_rig">gravimetric test rig</a> to programmatically dispense volumes and measure the mass of the dispense with an analytical balance. The test rig was run iteratively to generate data on either small volume dispenses (e.g. 10 &mu;l) or random dispenses in the 10 &mu;l to 100 &mu;l range with different <a href="./appendix.html#delivery_tubes">delivery tube configurations</a>. For the more challenging media we found that PTFE tube achieved a high level of <a href="./appendix.html#trueness">trueness</a> (RB = 0.32%) and <a href="./appendix.html#precision">precision</a> (CV = 1.63%) for 10 &mu;l dispenses, and better than ~3% error (typical) in the 10 &mu;l to 100 &mu;l range (<a href="#fig_volume_testing" target="_self">Figure 7</a>). The accuracy of PEEK tubing was slightly lower than PTFE but likely still good enough for most applications. Dispensing with water was more accurate than media in all cases.
+</p>
+
+<figure id="fig_volume_testing">
+<img src="figures/volume_testing/zues_SWTT-30-C_PTFE_tube_media_random_volumes.png" alt="Figure volume testing" id="fig_volume_testing_img" style="width:100%;">
+<table class="figure_controls">
+	<tr>
+	<td>Data:</td>
+	<td><select id="fig_volume_testing_choice_sheet" onchange="update_fig_volume_testing()">
+			<option value="1" selected="selected">1) PTFE + media (random volumes)</option>
+			<option value="2">2) PTFE + media (fixed volumes)</option>
+			<option value="3">3) PTFE + water (random volumes)</option>
+			<option value="4">4) PTFE + water (fixed volumes)</option>
+			<option value="5">5) PEEK + media (random volumes)</option>
+			<option value="6">6) PEEK + media (fixed volumes)</option>
+			<option value="7">7) PEEK + water (fixed volumes)</option>
+	</select></td>
+	</tr>
+</table>
+<figcaption>
+<strong>Figure 7: volume testing.</strong> This interactive figure shows the volume testing data that was generated to evaluate the accuracy of a SALDA with different combinations of delivery tubes and liquids. The figure can be toggled between the different plots showing: <strong>1)</strong> random and <strong>2)</strong> fixed volumes for PTFE tube with media (error &lt; 3.04%, RB = 0.32%, CV = 1.63%), <strong>3)</strong> random and <strong>4)</strong> fixed volumes for PTFE tube with water (error &lt; 2.2%, RB = 0.24%, CV = 1.33%), <strong>5)</strong> random and <strong>6)</strong> fixed volumes for PEEK tube with media (error &lt; 20.2%, RB = 1.53%, CV = 2.79%) and <strong>7)</strong> fixed volumes for PEEK tube with water (RB = 0.45%, CV = 2.30%).
+</figcaption>
+</figure>
+<p></p>
+
+<h4 id="image_testing">Image testing</h4>
+<p>
+From the volume testing we determined that the fast and accurate 'jetting' dispense regime was preferable (<a href="#fig_dispense" target="_self">Figure 6</a>). However this rapid dispense mode could potentially disturb the imaging with vibrations (i.e. lose focus or cause XY motion) or disturb the sample (i.e. move cells around in the well). Here we show that we can image continuously during the dispense event and not noticeably disturb the imaging, and that U2-OS <a href="./appendix.html#adherent_cells">adherent cells</a> are not moved around by the jetting dispense, even when dispensing the larger 100 &mu;l volumes in <a href="figures/multiwell_samples/cellvis_C8SB-1.5H_8_well_chambered.pdf" target="_self">8 well chambered slides</a> (889 μl well) with relatively shallow ~200 &mu;l media (<a href="#fig_image_testing" target="_self">Figure 8</a>). We found a SALDA straightforward to use and well behaved during imaging, but there are some practical considerations that should be taken into account during the <a href="./appendix.html#setup">setup</a>.
+</p>
+
+<figure id="fig_image_testing">
+<video controls autoplay loop muted style="max-height:85%; max-width:100%;" poster="figures/image_testing/image_testing.png">
+<source src="figures/image_testing/fl_timelapse_tg.mp4" type="video/mp4" id="fig_image_testing_img" >
+Your browser doesn't support HTML5 MP4 video.
+</video>
+<table class="figure_controls">
+	<tr>
+	<td>Video:</td>
+	<td><select id="fig_image_testing_choice_sheet" onchange="update_fig_image_testing()">
+			<option value="1" selected="selected">a) Fluorescence timelapse Tg dispense</option>
+			<option value="2">b) Fluorescence timelapse media dispense</option>
+			<option value="3">c) DIC timelapse media dispense</option>
+			<option value="4">d) Fluorescence tile media dispense</option>
+			<option value="5">e) DIC tile media dispense</option>
+	</select></td>
+	</tr>
+</table>
+<figcaption>
+<strong>Figure 8: imaging with a SALDA.</strong> We tested imaging with a SALDA in the following modes and found no obvious disturbance, vibrations, motion or induced cell movement: 
+<strong>a)</strong> A 5 min fluorescence timelapse with 10 s image intervals and a thapsigargin (100 nM) dispense at ~50 s, <strong>b)</strong> A 5 min control timelapse with 10 s image intervals and a media dispense at ~50 s, <strong>c)</strong> A fast 20 s DIC timelapse with 0.2 s image intervals and a media dispense at ~4 s, <strong>d)</strong> an 8 x 8 tiled region in fluorescence before and after a media dispense and <strong>e)</strong> an 6 x 6 tiled region in DIC before and after a media dispense showing the shadowing artefact from the SALDA holding tube (the apparent motion in the top right quadrant is an image merge artefact from the Leica software and can be ignored). All dispenses were 100 &mu;l volumes at a flow rate of 110 &mu;l/s. All imaging was done with a 20x 0.8 NA air objective. We used <a href="figures/multiwell_samples/cellvis_C8SB-1.5H_8_well_chambered.pdf" target="_self">8 well chambered slides</a> (889 &mu;l well) loaded with a relatively shallow ~200 &mu;l of media.
+</figcaption>
+</figure>
+<p></p>
+
+<h3 id="discussion">Discussion</h3>
+<p>
+We designed, built and tested a simple automatic liquid dispense arrangement (SALDA) for timelapse microscopy that is compatible with typical multiwell sample formats and microscope platforms. The mechanical design takes advantage of the existing microscope XY stage, so that as different wells are repositioned for imaging, they are also positioned for a dispense. The programmatic control enables accurate and repeatable timing and the ability to integrate the dispense event with commercial or custom microscopes. Together the mechanical design and programmatic control can enable a series of liquid perturbations over different wells of a multiwell sample in a predetermined way.
+</p>
+<p>
+We showed that a SALDA can quickly dispense water and media volumes in the 10 &mu;l to 100 &mu;l range in less than 1 second with high trueness (RB = 0.32%) and precision (CV = 1.63%), and without disturbing the imaging, or the sample in the case of U2-OS adherent cells. This eliminates vibrations from manual pipetting and facilitates accurate, adjustable, convenient and repeatable liquid perturbations. The SALDA fluidic design is flexible, low cost, readily deployed and rapidly cleaned or replaced. We acknowledge that U2-OS cells are strongly adherent and reasonably tolerant of mechanical perturbation, so although we did not observe any adverse effects on the cells here we accept that very mechanosensitive cells may require re-optimization of a SALDA at lower flow rates.
+</p>
+<p>
+We did notice some imaging artefacts when using a SALDA. The dispense event can cause motion in loose or non-adhered material and the liquid pressure itself can induce a biological response (i.e. a response from a media only dispense). We also noticed minor reflections in epi fluorescence and significant shadowing in transmitted light imaging modes from the SALDA holding tube. These effects are also present to some degree with manual pipetting and can be alleviated by moving the SALDA holding tube away from the immediate field of view but still within the well. We acknowledge that imaging and dispensing at the edge of a well could easily lead to liquid outside the intended well and should be avoided.
+<p>
+<p>
+Here we tested a SALDA with a 2.5 ml syringe that can deliver larger volumes over smaller sample formats (i.e. 8 well chambered slides) or smaller volumes over larger sample formats (i.e. 96 well plates). In hindsight we suspect a 10 ml syringe could be a better all round option that is still accurate for small volume dispenses (e.g. 10 &mu;l), whilst also covering larger sample formats and offering the higher flow rates that may be needed for more viscous fluids. Markedly different liquids like those with higher protein content (e.g. more FBS) or different fluid properties (e.g. DMSO or ethanol) will likely require re-validation of the system performance.
+</p>
+<p>
+We show a SALDA with a particular stage top incubator and microscope platform, but the arrangement is easily modified and applied to any system that can accommodate a small diameter tube (~2 mm). We present a specific syringe pump, fluidic and mechanical design, but we expect the methods developed here can inspire other variants with different hardware and for different applications that can benefit from a simple automated gravity dispense. We found small changes to the fluidic design had a significant effect on the fluidic performance, so we would encourage quantitative testing of new or different variants.
+</p>
+<p>
+The simplicity of a SALDA is one of its main advantages, but it can also be a shortcoming. A SALDA can only deliver 1 type of liquid at a time with an adjustable dispense volume and flow rate. However, some experiments could benefit from agile switching between different liquids, or even mixing liquids or adjusting concentrations during the experiment. Figuring out how to accommodate more sophisticated liquid perturbation experiments could be an interesting future direction for this technology.
+</p>
+
+<h3>Acknowledgements</h3>
+<p>
+We thank Nate Thayer for his help with fluidic parts and fittings and device control, David Conegliano for his guidance on liquid volume verification testing and Magdalena Preciado López for her role in supporting microscopy and microscope technique development.
+</p>
+<p>This work was funded and supported by <a href="https://www.calicolabs.com/">Calico Life Sciences LLC</a>, and we 
+would like to acknowledge the fantastic research environment that has been created here by the senior staff. We have 
+enjoyed a spectacular level of freedom and support that has made this work possible.</p>
+
+<h3><a href="./appendix.html">Appendix</a></h3>
+<p>Additional details can be found in the <a href="./appendix.html">appendix</a>.</p>
+
+<noscript>
+<h3>Your browser doesn't seem to support Javascript. This document uses Javascript to generate a reference list, 
+which would normally be displayed here. Either activate Javascript, or use the "Download PDF" link above if you 
+want to see the reference list.</h3></noscript>
+
+</section>
+<footer>
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="./images/cc_by_4p0.png"></a>
+
+  <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a></small></p>
+</footer>
+</div>
+ <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>
