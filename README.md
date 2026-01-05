@@ -1,5 +1,7 @@
 # A simple automatic liquid dispense arrangement (SALDA) for timelapse microscopy
 
+<a href="https://doi.org/10.5281/zenodo.18155241"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18155241.svg" alt="DOI"></a>
+
 A technical note that describes a simple automatic liquid dispense arrangement (SALDA) for timelapse microscopy. This repository 
 hosts everything you need to reproduce our results. Read the publication here:
 
